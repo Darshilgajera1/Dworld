@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head itemscope itemtype="http://schema.org/WPHeader">
+    <meta charset="UTF-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"383c3b1fb5",applicationID:"94924493"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(10),c=t(11),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(12);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],7:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(9),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],8:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],9:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],10:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],11:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],12:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(10),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!P++){var t=M.info=NREUM.info,e=g.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(O,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+M.offset],null,"api"),c("timing",["load",n]);var r=g.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=v+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===g.readyState&&o()}function o(){c("mark",["domContent",a()+M.offset],null,"api")}var a=t(5),c=t("handle"),f=t(10),u=t("ee"),s=t(8),d=t(6),p=t(2),l=t(3),v=p.getConfiguration("ssl")===!1?"http":"https",m=window,g=m.document,y="addEventListener",h="attachEvent",w=m.XMLHttpRequest,b=w&&w.prototype,E=!d(m.location);NREUM.o={ST:setTimeout,SI:m.setImmediate,CT:clearTimeout,XHR:w,REQ:m.Request,EV:m.Event,PR:m.Promise,MO:m.MutationObserver};var x=""+location,O={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1215.min.js"},T=w&&b&&b[y]&&!/CriOS/.test(navigator.userAgent),M=e.exports={offset:a.getLastTimestamp(),now:a,origin:x,features:{},xhrWrappable:T,userAgent:s,disabled:E};if(!E){t(1),t(7),g[y]?(g[y]("DOMContentLoaded",o,l(!1)),m[y]("load",r,l(!1))):(g[h]("onreadystatechange",i),m[h]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var P=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(11),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+    <script >
+      var ajaxurl = "https://blockgeeks.com/wp-admin/admin-ajax.php"
+    </script>
+    <meta name='robots' content='max-image-preview:large' />
+<link rel='preload' as='script' href='https://blockgeeks.com/wp-content/plugins/wpdiscuz/assets/js/wpdiscuz.js' data-wpacu-preload-js='1'>
+<link rel="preload" as="font" href="https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semibold/latest.woff2" data-wpacu-preload-font="1" crossorigin>
+
+<!-- Social Warfare v4.3.0 https://warfareplugins.com - BEGINNING OF OUTPUT -->
+<meta property="og:description" content="The largest marketplace for crypto collectibles">
+<meta property="og:title" content="OpenSea">
+<meta property="article_author" content="sasha">
+<meta property="article_publisher" content="https://www.facebook.com/Blockgeeks">
+<meta property="og:image" content="https://blockgeeks.com/wp-content/uploads/2020/03/opensealogo.png">
+<meta property="fb:app_id" content="132189643888579">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://blockgeeks.com/community-partners/opensea/">
+<meta property="og:site_name" content="Blockgeeks">
+<meta property="article:published_time" content="2020-03-11T18:51:36-04:00">
+<meta property="article:modified_time" content="2020-04-28T09:02:54-04:00">
+<meta property="og:updated_time" content="2020-04-28T09:02:54-04:00">
+<meta name="twitter:title" content="OpenSea">
+<meta name="twitter:description" content="The largest marketplace for crypto collectibles">
+<meta name="twitter:image" content="https://blockgeeks.com/wp-content/uploads/2020/03/opensealogo.png">
+<meta name="twitter:site" content="@Blockgks">
+<meta name="twitter:creator" content="@Blockgks">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+	@font-face {
+		font-family: "sw-icon-font";
+		src:url("https://blockgeeks.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=4.3.0");
+		src:url("https://blockgeeks.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.eot?ver=4.3.0#iefix") format("embedded-opentype"),
+		url("https://blockgeeks.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.woff?ver=4.3.0") format("woff"),
+		url("https://blockgeeks.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.ttf?ver=4.3.0") format("truetype"),
+		url("https://blockgeeks.com/wp-content/plugins/social-warfare/assets/fonts/sw-icon-font.svg?ver=4.3.0#1445203416") format("svg");
+		font-weight: normal;
+		font-style: normal;
+		font-display:block;
+	}
+</style>
+<!-- Social Warfare v4.3.0 https://warfareplugins.com - END OF OUTPUT -->
+
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v15.3 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title itemprop="headline">OpenSea - Blockgeeks</title>
+	<meta itemprop="description" name="description" content="OpenSea The largest marketplace for crypto collectibles Join the biggest blockchain community today." />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://blockgeeks.com/community-partners/opensea/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="OpenSea - Blockgeeks" />
+	<meta property="og:description" content="OpenSea The largest marketplace for crypto collectibles Join the biggest blockchain community today." />
+	<meta property="og:url" content="https://blockgeeks.com/community-partners/opensea/" />
+	<meta property="og:site_name" content="Blockgeeks" />
+	<meta property="article:publisher" content="https://www.facebook.com/Blockgeeks" />
+	<meta property="article:modified_time" content="2020-04-28T13:02:54+00:00" />
+	<meta property="og:image" content="https://blockgeeks.com/wp-content/uploads/2020/03/opensealogo.png" />
+	<meta property="og:image:width" content="200" />
+	<meta property="og:image:height" content="200" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:creator" content="@blockgks" />
+	<meta name="twitter:site" content="@blockgks" />
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="sasha">
+	<meta name="twitter:label2" content="Est. reading time">
+	<meta name="twitter:data2" content="0 minutes">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://blockgeeks.com/#organization","name":"Blockgeeks","url":"https://blockgeeks.com/","sameAs":["https://www.facebook.com/Blockgeeks","https://www.instagram.com/blockgeeks/","https://www.linkedin.com/company/blockgeeks","https://www.youtube.com/channel/UCd8CDrm6rvwBZc6g7BYAkfQ","https://twitter.com/blockgks"],"logo":{"@type":"ImageObject","@id":"https://blockgeeks.com/#logo","inLanguage":"en-CA","url":"https://blockgeeks.com/wp-content/uploads/2019/05/bg-icon-and-logo-1.png","width":1600,"height":409,"caption":"Blockgeeks"},"image":{"@id":"https://blockgeeks.com/#logo"}},{"@type":"WebSite","@id":"https://blockgeeks.com/#website","url":"https://blockgeeks.com/","name":"Blockgeeks","description":"Blockgeeks is The Blockchain Ecosystem","publisher":{"@id":"https://blockgeeks.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://blockgeeks.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-CA"},{"@type":"ImageObject","@id":"https://blockgeeks.com/community-partners/opensea/#primaryimage","inLanguage":"en-CA","url":"https://blockgeeks.com/wp-content/uploads/2020/03/opensealogo.png","width":200,"height":200},{"@type":"WebPage","@id":"https://blockgeeks.com/community-partners/opensea/#webpage","url":"https://blockgeeks.com/community-partners/opensea/","name":"OpenSea - Blockgeeks","isPartOf":{"@id":"https://blockgeeks.com/#website"},"primaryImageOfPage":{"@id":"https://blockgeeks.com/community-partners/opensea/#primaryimage"},"datePublished":"2020-03-11T22:51:36+00:00","dateModified":"2020-04-28T13:02:54+00:00","description":"OpenSea The largest marketplace for crypto collectibles Join the biggest blockchain community today.","breadcrumb":{"@id":"https://blockgeeks.com/community-partners/opensea/#breadcrumb"},"inLanguage":"en-CA","potentialAction":[{"@type":"ReadAction","target":["https://blockgeeks.com/community-partners/opensea/"]}]},{"@type":"BreadcrumbList","@id":"https://blockgeeks.com/community-partners/opensea/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://blockgeeks.com/","url":"https://blockgeeks.com/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://blockgeeks.com/community-partners/opensea/","url":"https://blockgeeks.com/community-partners/opensea/","name":"OpenSea"}}]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link href="https://static.blockgeeks.com" rel="preconnect"><link href="https://a.opmnstr.com" rel="preconnect"><link href="https://cdn.onesignal.com" rel="preconnect"><link href="https://trackcmp.net" rel="preconnect"><link href="https://www.googletagmanager.com" rel="preconnect"><link href="https://c.s-microsoft.com" rel="preconnect"><link href="https://www.googleadservices.com" rel="preconnect"><link href="https://api.omappapi.com" rel="preconnect"><link href="https://www.facebook.com" rel="preconnect"><link href="https://www.google-analytics.com" rel="preconnect"><link href="https://googleads.g.doubleclick.net" rel="preconnect"><link href="https://onesignal.com" rel="preconnect"><link href="https://www.google.com" rel="preconnect"><link href="https://www.google.com.sg" rel="preconnect"><link href="https://cdnjs.cloudflare.com" rel="preconnect"><link href="https://ajax.googleapis.com" rel="preconnect"><link href="https://courses.blockgeeks.com" rel="preconnect"><link href="https://d12ee1u74lotna.cloudfront.net" rel="preconnect"><link href="https://js-agent.newrelic.com" rel="preconnect"><link href="https://bid.g.doubleclick.net" rel="preconnect"><link href="https://bam.nr-data.net" rel="preconnect"><link href="https://connect.facebook.net" rel="preconnect"><link href="https://www.google.co.in" rel="preconnect"><link href="https://www.gstatic.com" rel="preconnect"><link href="https://www.google.com.au" rel="preconnect"><link href="https://i.ytimg.com" rel="preconnect"><link href="https://img.onesignal.com" rel="preconnect"><link href="https://www.youtube.com" rel="preconnect"><link href="https://www.google.com.eg" rel="preconnect"><link href="https://www.google.com.tr" rel="preconnect"><link href="https://www.google.co.ke" rel="preconnect"><link href="https://www.google.co.za" rel="preconnect"><link href="https://www.google.com.my" rel="preconnect"><link href="https://platform.twitter.com" rel="preconnect"><link href="https://domestic.jikolimbourg.com" rel="preconnect"><link href="https://api.db-ip.com" rel="preconnect"><link href="https://www.google.com.ng" rel="preconnect"><link href="https://www.google.ae" rel="preconnect"><link href="https://stats.g.doubleclick.net" rel="preconnect"><link href="https://www.google.de" rel="preconnect"><link href="https://use.fontawesome.com" rel="preconnect"><link href="https://www.google.com.np" rel="preconnect"><link href="https://www.google.bs" rel="preconnect"><link href="https://www.google.ca" rel="preconnect"><link href="https://www.google.hr" rel="preconnect"><link href="https://www.google.com.vn" rel="preconnect"><link href="https://www.google.com.pk" rel="preconnect"><link href="https://syndication.twitter.com" rel="preconnect"><link href="https://cdn.syndication.twimg.com" rel="preconnect"><link href="https://www.google.co.uk" rel="preconnect"><link href="https://api.amplitude.com" rel="preconnect"><link href="https://s3.us-east-1.amazonaws.com" rel="preconnect"><link href="https://www.google.co.id" rel="preconnect"><link href="https://www.google.com.bd" rel="preconnect"><link href="https://www.google.co.nz" rel="preconnect"><link href="https://www.google.dk" rel="preconnect"><link href="https://translate.googleapis.com" rel="preconnect"><link href="https://translate.google.com" rel="preconnect"><link href="https://www.google.gr" rel="preconnect"><!-- blockgeeks.com is managing ads with Advanced Ads 1.30.1 --><!--noptimize--><script id="block-ready">
+			window.advanced_ads_ready=function(e,a){a=a||"complete";var d=function(e){return"interactive"===a?"loading"!==e:"complete"===e};d(document.readyState)?e():document.addEventListener("readystatechange",(function(a){d(a.target.readyState)&&e()}),{once:"interactive"===a})},window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[];		</script>
+		<!--/noptimize--><link data-minify="1" rel='stylesheet' id='BgWhatsNew-css-css'  href='https://blockgeeks.com/wp-content/cache/min/1/wp-content/plugins/BgWhatsNew/public/css/app-1a55bc9fa765e74db9fa866b68320293.css'  media='all' />
+<style    data-wpacu-inline-css-file='1'>
+#wpadminbar #wp-admin-bar-wp-bannerize-pro-parent-admin-menu .ab-icon::before{content:"\f232";top:3px}
+</style>
+<style    data-wpacu-inline-css-file='1'>
+.wp_bannerize_layout_vertical img{display:block;margin:0 auto}.wp_bannerize_layout_horizontal:after,.wp_bannerize_layout_horizontal:before{display:table!important;line-height:0!important;content:""!important}.wp_bannerize_layout_horizontal:after{clear:both!important}.wp_bannerize_layout_horizontal .wp_bannerize_banner_box{float:left}
+</style>
+<link data-minify="1" rel='stylesheet' id='main_styles-css'  href='https://blockgeeks.com/wp-content/cache/min/1/wp-content/themes/blockgeeks/dist/main-dfc67f3fd98fefc98a89ed5935382ba0.css'  media='all' />
+<style    data-wpacu-inline-css-file='1'>
+#amazon-polly-audio-table {
+	display:table;
+	width:100%;
+	border: 0 !important;
+}
+#amazon-polly-audio-table tbody {
+	border: 0 !important;
+}
+#amazon-polly-audio-table tr {
+	border: 0 !important;
+}
+#amazon-polly-logo-tab {
+width: 60px;
+display:table-cell;
+vertical-align: top;
+padding-bottom: 50px;
+}
+#amazon-polly-logo {
+height: 50px;
+width: 50px;
+}
+#amazon-polly-audio-tab {
+width: auto;
+display:table-cell;
+border: 0;
+}
+#amazon-ai-player-label {
+font-size: 80%;
+font-family: "Arial", Helvetica, sans-serif;
+}
+#amazon-polly-by-tab {
+font-size: .6em;
+text-align: right;
+}
+#amazon-polly-subscribe-tab {
+text-align: right;
+}
+#amazon-polly-trans-src {
+	font-weight: bold;
+}
+.amazon-polly-trans-label  {
+	display:inline;
+	font-size: .6em;
+}
+.amazon-polly-trans-label a {
+    text-decoration: none;
+}
+.amazon-ai-player {
+width: 100%;
+}
+.amazon-polly-transcript-area {
+    height: 6em;
+    width: 100%;
+}
+.amazon-ai-flag {
+  display: inline-block;
+  width: 35px;
+  height: 15px;
+  margin: 0px 0px 0px 0px;
+}
+.amazon-ai-flag-image {
+	max-height: 100%;
+}
+
+</style>
+<style    data-wpacu-inline-css-file='1'>
+.copy-the-code-inside-wrap .copy-the-code-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.copy-the-code-inside .copy-the-code-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.copy-the-code-wrap {
+    display: block;
+    position: relative;
+}
+
+.copy-the-code-wrap .copy-the-code-button {
+    background: #e1e3e8;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: none;
+    color: #424242;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 0;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+}
+
+.copy-the-code-wrap .copy-the-code-button:hover {
+    background: #d0d1d6;
+}
+
+.copy-the-code-outside + * {
+    margin-top: 0;
+}
+
+.copy-the-code-outside {
+    text-align: right;
+}
+
+/** Styles */
+.copy-the-code-wrap.copy-the-code-style-svg-icon .copy-the-code-button {
+    background: transparent;
+    padding: 0;
+}
+.copy-the-code-wrap.copy-the-code-style-svg-icon .copy-the-code-button svg {
+    height: auto;
+    width: 20px;
+    fill: #c1c1c1;
+}
+.copy-the-code-wrap.copy-the-code-style-cover .copy-the-code-button {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    font-size: 12px;
+}
+
+.copy-the-code-wrap.copy-the-code-style-cover:hover .copy-the-code-button {
+    opacity: 1;
+}
+
+.copy-the-code-inside-wrap.copy-the-code-style-svg-icon .copy-the-code-button {
+    padding: 10px;
+}
+
+.copy-the-code-wrap.copy-the-code-style-cover {
+    display: inline-block;
+}
+
+.copy-the-code-wrap .copy-the-code-target {
+    margin-top: 0;
+}
+
+.copy-the-code-style-svg-icon .copy-the-code-outside {
+    height: 32px;
+}
+</style>
+<link data-minify="1" rel='stylesheet' id='wpdiscuz-frontend-css-css'  href='https://blockgeeks.com/wp-content/cache/min/1/wp-content/plugins/wpdiscuz/assets/css/wpdiscuz-dd71cb30d402bc25b0d59ae964ac89fa.css'  media='all' />
+<link data-minify="1" rel='stylesheet' id='wpdumc-styles-css'  href='https://blockgeeks.com/wp-content/cache/min/1/wp-content/plugins/wpdiscuz-user-comment-mentioning/css/style-c9fdbfb0fa252ca01974aab52404d37c.css'  media='all' />
+<style    data-wpacu-inline-css-file='1'>
+@font-face{font-display:swap;font-family:ez-toc-icomoon;src:url(/wp-content/plugins/easy-table-of-contents/vendor/icomoon/fonts/ez-toc-icomoon.eot);src:url(/wp-content/plugins/easy-table-of-contents/vendor/icomoon/fonts/ez-toc-icomoon.eot?#iefix) format('embedded-opentype'),url(/wp-content/plugins/easy-table-of-contents/vendor/icomoon/fonts/ez-toc-icomoon.woff2) format('woff2'),url(data:application/x-font-woff;base64,d09GRgABAAAAAAUAAAsAAAAABLQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABPUy8yAAABCAAAAGAAAABgDxIEpGNtYXAAAAFoAAAAVAAAAFQX3NF7Z2FzcAAAAbwAAAAIAAAACAAAABBnbHlmAAABxAAAAKQAAACkMpINM2hlYWQAAAJoAAAANgAAADYHNiJlaGhlYQAAAqAAAAAkAAAAJAfCA8ZobXR4AAACxAAAABQAAAAUCgAAAGxvY2EAAALYAAAADAAAAAwAKABmbWF4cAAAAuQAAAAgAAAAIAAMAB5uYW1lAAADBAAAAdoAAAHaDexvRXBvc3QAAATgAAAAIAAAACAAAwAAAAMDAAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA6HoDwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADgAAAAKAAgAAgACAAEAIOh6//3//wAAAAAAIOh6//3//wAB/+MXigADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAABgAAAEAEAAMAAAQACQAOABMAFwAbAAATIRUhNTUhFSE1ESEVITUVIRUhNSUXNyElJwchAALA/UACwP1AAsD9QALA/UADAICA/wABAICAAQACQICAwICA/oCAgMCAgMDAwEDAwAAAAAABAAAAAQAAPP0q818PPPUACwQAAAAAANIL7zQAAAAA0gvvNAAAAAAEAAMAAAAACAACAAAAAAAAAAEAAAPA/8AAAAQAAAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAFBAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAAAoAFAAeAFIAAQAAAAUAHAAGAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA4ArgABAAAAAAABAA4AAAABAAAAAAACAAcAnwABAAAAAAADAA4ASwABAAAAAAAEAA4AtAABAAAAAAAFAAsAKgABAAAAAAAGAA4AdQABAAAAAAAKABoA3gADAAEECQABABwADgADAAEECQACAA4ApgADAAEECQADABwAWQADAAEECQAEABwAwgADAAEECQAFABYANQADAAEECQAGABwAgwADAAEECQAKADQA+GV6LXRvYy1pY29tb29uAGUAegAtAHQAbwBjAC0AaQBjAG8AbQBvAG8AblZlcnNpb24gMS4wAFYAZQByAHMAaQBvAG4AIAAxAC4AMGV6LXRvYy1pY29tb29uAGUAegAtAHQAbwBjAC0AaQBjAG8AbQBvAG8AbmV6LXRvYy1pY29tb29uAGUAegAtAHQAbwBjAC0AaQBjAG8AbQBvAG8AblJlZ3VsYXIAUgBlAGcAdQBsAGEAcmV6LXRvYy1pY29tb29uAGUAegAtAHQAbwBjAC0AaQBjAG8AbQBvAG8AbkZvbnQgZ2VuZXJhdGVkIGJ5IEljb01vb24uAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=) format('woff'),url(/wp-content/plugins/easy-table-of-contents/vendor/icomoon/fonts/ez-toc-icomoon.ttf) format('truetype'),url(/wp-content/plugins/easy-table-of-contents/vendor/icomoon/fonts/ez-toc-icomoon.svg#ez-toc-icomoon) format('svg');font-weight:400;font-style:normal}/*!* Better Font Rendering =========== *!*/
+</style>
+<link rel='stylesheet' id='ez-toc-css'  href='https://blockgeeks.com/wp-content/plugins/easy-table-of-contents/assets/css/screen.min.css'  media='all' />
+<style id='ez-toc-inline-css' >
+div#ez-toc-container p.ez-toc-title {font-size: 120%;}div#ez-toc-container p.ez-toc-title {font-weight: 700;}div#ez-toc-container ul li {font-size: 95%;}
+</style>
+<link rel='stylesheet' id='social_warfare-css'  href='https://blockgeeks.com/wp-content/plugins/social-warfare/assets/css/style.min.css'  media='all' />
+<style    data-wpacu-inline-css-file='1'>
+ul.wpbdp-listings-widget-list li{list-style:none;border-bottom:1px dotted #eee;margin:0;padding:2px 0}ul.wpbdp-listings-widget-list li .listing-title{font-weight:bold;display:block}
+</style>
+<style    data-wpacu-inline-css-file='1'>
+.wpbdp-dnd-area{margin:0 auto;border:2px dashed #ddd;width:98%;height:252px;color:#666}.wpbdp-dnd-area p{margin-top:13px !important;margin-bottom:13px !important}.wpbdp-dnd-area .upload-button{background:#fff;position:relative;overflow:hidden}.wpbdp-dnd-area .upload-button input{margin:0;padding:0;position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;opacity:0;cursor:pointer;border:none !important}.wpbdp-dnd-area.dragging{background:#efefef}.wpbdp-dnd-area .dnd-area-inside{margin:76px auto 0;text-align:center;color:#aaa}.wpbdp-dnd-area .dnd-area-inside-working{color:#000;text-align:center;margin:50px auto 0}.wpbdp-dnd-area .dnd-area-inside-working span{font-weight:bold}.wpbdp-dnd-area .dnd-area-inside-error{font-size:95%;color:#900000;text-align:center;margin:50px 25px}
+</style>
+<link rel='stylesheet' id='wpbdp-js-select2-css-css'  href='https://blockgeeks.com/wp-content/plugins/business-directory-plugin/vendors/selectWoo/css/selectWoo.min.css'  media='all' />
+<link rel='stylesheet' id='wpbdp-base-css-css'  href='https://blockgeeks.com/wp-content/plugins/business-directory-plugin/assets/css/wpbdp.min.css'  media='all' />
+<style    data-wpacu-inline-css-file='1'>
+.wpbdp-form-field .characters-left-display{font-size:90%;color:#fff;background:#000;padding:2px 5px}.wpbdp-form-field .characters-left-display .characters-left-placeholder{font-weight:bold}
+</style>
+<link rel='stylesheet' id='wpdiscuz_widgets_comm_vot_style-css'  href='https://blockgeeks.com/wp-content/plugins/wpdiscuz-widgets/assets/css/style.min.css'  media='all' />
+<style    data-wpacu-inline-css-file='1'>
+.wpbdp-listing .listing-title {
+    border: none;
+    border-bottom: 1px solid #044F8D;
+    font-size: 115%;
+    margin-bottom: 8px;
+    background: inherit;
+}
+
+.wpbdp-listing a:not(.wpbdp-button) {
+    color: #62CAF4;
+    text-decoration: none;
+    border-bottom: 1px solid #F3F3F3;
+}
+
+.wpbdp-listing .wpbdp-button {
+    padding: 0.74375em 0.775em 0.68125em;
+}
+
+.wpbdp-listing .listing-thumbnail {
+    float: left;
+}
+
+.wpbdp-listing .listing-details {
+    margin-left: 160px;
+}
+
+.wpbdp-listing .listing-title,
+.wpbdp-listing .listing-title a,
+.wpbdp-listing .listing-title h2 {
+    text-decoration: none;
+    font-weight: bold;
+}
+.wpbdp-listing .listing-title a,
+.wpbdp-listing .listing-title h2 {
+    color: #044f8d;
+    font-size: 34px;
+}
+
+.wpbdp-view-show_listing h3 {
+    font-size: 28px;
+}
+
+.wpbdp-listing .address-info .address-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.wpbdp-listing .wpbdp-field {
+    margin: 4px 0;
+}
+
+.wpbdp-listing .wpbdp-field-type-textarea label,
+.wpbdp-listing .wpbdp-field-type-textarea .field-label {
+    display: block;
+}
+
+.wpbdp-listing .listing-actions {
+    text-align: right;
+}
+
+</style>
+<link data-minify="1" rel='stylesheet' id='BGAMA-css-css'  href='https://blockgeeks.com/wp-content/cache/min/1/wp-content/plugins/BGAMA/public/css/app-e1198e222a7d8879b254577a62b24db3.css'  media='all' />
+<link data-minify="1" rel='stylesheet' id='BGWeeklyStats-css-css'  href='https://blockgeeks.com/wp-content/cache/min/1/wp-content/plugins/BGWeeklyStats/public/css/app-49e60818839385396f100567370cb81b.css'  media='all' />
+<script    src='https://blockgeeks.com/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js'></script>
+<script    id='jquery-core-js-after'>
+$ = jQuery;
+</script>
+<script  id='advanced-ads-advanced-js-js-extra'>
+/* <![CDATA[ */
+var advads_options = {"blog_id":"1","privacy":{"enabled":false,"state":"not_needed"}};
+/* ]]> */
+</script>
+<script    src='https://blockgeeks.com/wp-content/plugins/advanced-ads/public/assets/js/advanced.min.js' id='advanced-ads-advanced-js-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/advanced-ads-pro/assets/advanced-ads-pro.js' id='advanced-ds-pro/front-js'></script>
+<script    src='https://blockgeeks.com/wp-includes/js/jquery/ui/core.min.js' id='jquery-ui-core-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/business-directory-plugin/vendors/jQuery-File-Upload/js/jquery.iframe-transport.js' id='jquery-file-upload-iframe-transport-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/business-directory-plugin/vendors/jQuery-File-Upload/js/jquery.fileupload.js' id='jquery-file-upload-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/business-directory-plugin/assets/js/dnd-upload.min.js' id='wpbdp-dnd-upload-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/business-directory-plugin/vendors/jquery-breakpoints.min.js' id='breakpoints.js-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/business-directory-plugin/vendors/selectWoo/js/selectWoo.full.min.js' id='wpbdp-js-select2-js'></script>
+<script    src='https://blockgeeks.com/wp-includes/js/jquery/ui/mouse.min.js' id='jquery-ui-mouse-js'></script>
+<script    src='https://blockgeeks.com/wp-includes/js/jquery/ui/sortable.min.js' id='jquery-ui-sortable-js'></script>
+<script    src='https://blockgeeks.com/wp-includes/js/jquery/ui/datepicker.min.js' id='jquery-ui-datepicker-js'></script>
+<script    id='jquery-ui-datepicker-js-after'>
+jQuery(document).ready(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":0,"isRTL":false});});
+</script>
+<script  id='wpbdp-js-js-extra'>
+/* <![CDATA[ */
+var wpbdp_global = {"ajaxurl":"https:\/\/blockgeeks.com\/no-admin-ajax\/"};
+/* ]]> */
+</script>
+<script    src='https://blockgeeks.com/wp-content/plugins/business-directory-plugin/assets/js/wpbdp.min.js' id='wpbdp-js-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/business-directory-featured-levels/resources/frontend.js' id='wpbdp-restrictions-js-frontend-js'></script>
+<script  id='advanced-ads-pro/cache_busting-js-extra'>
+/* <![CDATA[ */
+var advanced_ads_pro_ajax_object = {"ajax_url":"https:\/\/blockgeeks.com\/no-admin-ajax\/","lazy_load_module_enabled":"","lazy_load":{"default_offset":0,"offsets":[]},"moveintohidden":""};
+/* ]]> */
+</script>
+<script    src='https://blockgeeks.com/wp-content/plugins/advanced-ads-pro/modules/cache-busting/inc/base.min.js' id='advanced-ads-pro/cache_busting-js'></script>
+<script  id='wp-disable-css-lazy-load-js-extra'>
+/* <![CDATA[ */
+var WpDisableAsyncLinks = {"wp-disable-font-awesome":"https:\/\/use.fontawesome.com\/releases\/v5.6.3\/css\/all.css"};
+/* ]]> */
+</script>
+<script    src='https://blockgeeks.com/wp-content/plugins/wp-disable/js/css-lazy-load.min.js' id='wp-disable-css-lazy-load-js'></script>
+<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-81894740-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+  gtag('config', 'UA-81894740-1', { 'optimize_id': 'GTM-5MC5NPC'});
+  gtag('config', 'AW-783504764');
+</script>
+<meta name="msvalidate.01" content="D2879020CF9427C51D75E8CE9D3FDC47" />
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://blockgeeks.com/wp-content/cache/busting/facebook-tracking/fbpix-events-en_US-2.9.5.js');
+  fbq('init', '1597654343872662');
+  fbq('track', 'PageView');
+</script>
+<!-- End Facebook Pixel Code -->
+<meta name="ahrefs-site-verification" content="03a4db5dda622580fe9feae17a090496c6fdfccf2895a0d916762809a1181cee">
+<script>
+  var trackcmp_email = '';
+  var trackcmp = document.createElement("script");
+  trackcmp.async = true;
+  trackcmp.type = 'text/javascript';
+  trackcmp.src = '//trackcmp.net/visit?actid=223361613&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+  var trackcmp_s = document.getElementsByTagName("script");
+  if (trackcmp_s.length) {
+    trackcmp_s[0].parentNode.appendChild(trackcmp);
+  } else {
+    var trackcmp_h = document.getElementsByTagName("head");
+    trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+  }
+</script>
+
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K9RDC58');</script>
+<!-- End Google Tag Manager -->
+<meta name="naver-site-verification" content="e341dcd5fc5fe81ad367b082f72f5f6563f85d26"/>            <style>
+                #wpcomm .wc_new_comment{background:#24B2FA;}
+                #wpcomm .wc_new_reply{background:#24B2FA;}
+                #wpcomm .wc-form-wrapper{ background:none; } /* ->formBGColor */
+                #wpcomm .wpdiscuz-front-actions{background:#F9F9F9;}
+                #wpcomm .wpdiscuz-subscribe-bar{background:#F9F9F9;}
+                #wpcomm select,
+                #wpcomm input[type="text"],
+                #wpcomm input[type="email"],
+                #wpcomm input[type="url"],
+                #wpcomm input[type="date"],
+                #wpcomm input[type="color"]{border:#D9D9D9 1px solid;}
+                #wpcomm .wc-comment .wc-comment-right{background:#FEFEFE;}
+                #wpcomm .wc-reply .wc-comment-right{background:#F8F8F8;}
+                #wpcomm .wc-comment-right .wc-comment-text, 
+                #wpcomm .wc-comment-right .wc-comment-text *{
+                    font-size:14px;
+                }
+                #wpcomm .wc-blog-administrator > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-administrator > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-administrator > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-editor > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-editor > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-editor > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-author > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-author > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-author > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-contributor > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-contributor > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-contributor > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-subscriber > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-subscriber > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-subscriber > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-employer > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-employer > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-employer > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-wpseo_manager > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-wpseo_manager > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-wpseo_manager > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-wpseo_editor > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-wpseo_editor > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-wpseo_editor > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-post_author > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-post_author > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-post_author > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-guest > .wc-comment-right .wc-comment-author a{color:#24B2FA;}#wpcomm .wc-blog-guest > .wc-comment-left .wc-comment-label{color:#24B2FA; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-user > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-user > .wc-comment-right .wc-comment-author a{color:#00B38F;}#wpcomm .wc-blog-user > .wc-comment-left .wc-comment-label{color:#00B38F; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-advanced_ads_admin > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-advanced_ads_admin > .wc-comment-right .wc-comment-author a{color:#00B38F;}#wpcomm .wc-blog-advanced_ads_admin > .wc-comment-left .wc-comment-label{color:#00B38F; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-advanced_ads_manager > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-advanced_ads_manager > .wc-comment-right .wc-comment-author a{color:#00B38F;}#wpcomm .wc-blog-advanced_ads_manager > .wc-comment-left .wc-comment-label{color:#00B38F; border:none; border-bottom: 1px solid #dddddd; }#wpcomm .wc-blog-advanced_ads_user > .wc-comment-right .wc-comment-author, #wpcomm .wc-blog-advanced_ads_user > .wc-comment-right .wc-comment-author a{color:#00B38F;}#wpcomm .wc-blog-advanced_ads_user > .wc-comment-left .wc-comment-label{color:#00B38F; border:none; border-bottom: 1px solid #dddddd; }                #wpcomm .wc-comment .wc-comment-left .wc-comment-label{ background: #ffffff;}
+                #wpcomm .wc-comment-left .wc-follow-user{color:#24B2FA;}
+                #wpcomm .wc-load-more-submit{border:1px solid #D9D9D9;}
+                #wpcomm .wc-new-loaded-comment > .wc-comment-right{background:#FFFAD6;}
+                #wpcomm .wpdiscuz-subscribe-bar{color:#777;}
+                #wpcomm .wpdiscuz-front-actions .wpdiscuz-sbs-wrap span{color: #777;}
+                #wpcomm .page-numbers{color:#555;border:#555 1px solid;}
+                #wpcomm span.current{background:#555;}
+                #wpcomm .wpdiscuz-readmore{cursor:pointer;color:#24B2FA;}
+                #wpcomm .wpdiscuz-textarea-wrap{border:#D9D9D9 1px solid;} .wpd-custom-field .wcf-pasiv-star, #wpcomm .wpdiscuz-item .wpdiscuz-rating > label {color: #DDDDDD;}
+                #wpcomm .wpdiscuz-item .wpdiscuz-rating:not(:checked) > label:hover,.wpdiscuz-rating:not(:checked) > label:hover ~ label {   }#wpcomm .wpdiscuz-item .wpdiscuz-rating > input ~ label:hover, #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label, #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:not(:checked) ~ label:hover ~ label{color: #FFED85;} 
+                #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover, #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover, #wpcomm .wpdiscuz-item .wpdiscuz-rating > label:hover ~ input:checked ~ label, #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked + label:hover ~ label, #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label:hover ~ label, .wpd-custom-field .wcf-active-star, #wpcomm .wpdiscuz-item .wpdiscuz-rating > input:checked ~ label{ color:#FFD700;}
+                #wpcomm .wc-comment-header{border-top: 1px solid #dedede;}
+                #wpcomm .wc-reply .wc-comment-header{border-top: 1px solid #dedede;}
+                /* Buttons */
+                #wpcomm button, 
+                #wpcomm input[type="button"], 
+                #wpcomm input[type="reset"], 
+                #wpcomm input[type="submit"]{ border: 1px solid #555555; color: #FFFFFF; background-color: #555555; }
+                #wpcomm button:hover, 
+                #wpcomm button:focus,
+                #wpcomm input[type="button"]:hover, 
+                #wpcomm input[type="button"]:focus, 
+                #wpcomm input[type="reset"]:hover, 
+                #wpcomm input[type="reset"]:focus, 
+                #wpcomm input[type="submit"]:hover, 
+                #wpcomm input[type="submit"]:focus{ border: 1px solid #333333; background-color: #333333;  }
+                #wpcomm .wpdiscuz-sort-buttons{color:#777777;}
+                #wpcomm .wpdiscuz-sort-button{color:#777777; cursor:pointer;}
+                #wpcomm .wpdiscuz-sort-button:hover{color:#24B2FA!important;cursor:pointer;}
+                #wpcomm .wpdiscuz-sort-button-active{color:#24B2FA!important;cursor:default!important;}
+                #wpcomm .wc-cta-button, 
+                #wpcomm .wc-cta-button-x{color:#777777; }
+                #wpcomm .wc-vote-link.wc-up{color:#999999;}
+                #wpcomm .wc-vote-link.wc-down{color:#999999;}
+                #wpcomm .wc-vote-result{color:#999999;}
+                #wpcomm .wpf-cta{color:#999999; }
+                #wpcomm .wc-comment-link .wc-share-link .wpf-cta{color:#eeeeee;}
+                #wpcomm .wc-footer-left .wc-reply-button{border:1px solid #24B2FA!important; color: #24B2FA;}
+                #wpcomm .wpf-cta:hover{background:#24B2FA!important; color:#FFFFFF;}
+                #wpcomm .wc-footer-left .wc-reply-button.wc-cta-active, #wpcomm .wc-cta-active{background:#24B2FA!important; color:#FFFFFF;}
+                #wpcomm .wc-cta-button:hover{background:#24B2FA!important; color:#FFFFFF;}
+                #wpcomm .wc-footer-right .wc-toggle,
+                #wpcomm .wc-footer-right .wc-toggle a,
+                #wpcomm .wc-footer-right .wc-toggle i{color:#24B2FA;}
+                /* STICKY COMMENT HEADER */
+                #wpcomm .wc-sticky-comment.wc-comment .wc-comment-header .wpd-sticky{background: #1ecea8; color: #ffffff; }
+                #wpcomm .wc-closed-comment.wc-comment .wc-comment-header .wpd-closed{background: #aaaaaa; color: #ffffff;}
+                /* PRIVATE COMMENT HEADER */
+                #wpcomm .wc-private-comment.wc-comment .wc-comment-header .wpd-private{background: #999999; color: #ffffff;}
+                /* FOLLOW LINK */
+
+                #wpcomm .wc-follow{color:#777777;}
+                #wpcomm .wc-follow-active{color:#ff7a00;}
+                #wpcomm .wc-follow:hover i,
+                #wpcomm .wc-unfollow:hover i,
+                #wpcomm .wc-follow-active:hover i{color:#24B2FA;}
+                                .wpd-wrapper .wpd-list-item.wpd-active{border-top: 3px solid #24B2FA;}
+                .wpdiscuz-fem-moderation{background-color:#FFFFFF;border:1px solid #333333}#wpcomm .wpdiscuz-fem-moderate-comments .wpdiscuz-fem-arrow{border-bottom-color:#333333}#wpcomm .wpdiscuz-fem-moderate-comments  .wpdiscuz-fem-arrow-no-border{border-bottom-color:#FFFFFF}.wpdiscuz-fem-moderation-buttons span{border-bottom:1px solid #DDDDDD;font-size:14px !important}                .comments-area{width:auto;}
+            </style>
+            
+        <script >
+            var jQueryMigrateHelperHasSentDowngrade = false;
+
+			window.onerror = function( msg, url, line, col, error ) {
+				// Break out early, do not processing if a downgrade reqeust was already sent.
+				if ( jQueryMigrateHelperHasSentDowngrade ) {
+					return true;
+                }
+
+				var xhr = new XMLHttpRequest();
+				var nonce = 'd3d29f5b74';
+				var jQueryFunctions = [
+					'andSelf',
+					'browser',
+					'live',
+					'boxModel',
+					'support.boxModel',
+					'size',
+					'swap',
+					'clean',
+					'sub',
+                ];
+				var match_pattern = /\)\.(.+?) is not a function/;
+                var erroredFunction = msg.match( match_pattern );
+
+                // If there was no matching functions, do not try to downgrade.
+                if ( typeof erroredFunction !== 'object' || typeof erroredFunction[1] === "undefined" || -1 === jQueryFunctions.indexOf( erroredFunction[1] ) ) {
+                    return true;
+                }
+
+                // Set that we've now attempted a downgrade request.
+                jQueryMigrateHelperHasSentDowngrade = true;
+
+				xhr.open( 'POST', 'https://blockgeeks.com/no-admin-ajax/' );
+				xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+				xhr.onload = function () {
+					var response,
+                        reload = false;
+
+					if ( 200 === xhr.status ) {
+                        try {
+                        	response = JSON.parse( xhr.response );
+
+                        	reload = response.data.reload;
+                        } catch ( e ) {
+                        	reload = false;
+                        }
+                    }
+
+					// Automatically reload the page if a deprecation caused an automatic downgrade, ensure visitors get the best possible experience.
+					if ( reload ) {
+						location.reload();
+                    }
+				};
+
+				xhr.send( encodeURI( 'action=jquery-migrate-downgrade-version&_wpnonce=' + nonce ) );
+
+				// Suppress error alerts in older browsers
+				return true;
+			}
+        </script>
+
+		<script >
+		var advadsCfpQueue = [];
+		var advadsCfpAd = function( adID ){
+			if ( 'undefined' == typeof advadsProCfp ) { advadsCfpQueue.push( adID ) } else { advadsProCfp.addElement( adID ) }
+		};
+		</script>
+		        <style >.like-count-first.wpdiscuz-widget-comment .wpdiscuz-widget-icon-show-box{background:#20252B;}#widget-comments-container .wpdiscuz-widgets-tab-title-list li .fas{color:#20252B;}div#widget-comments-container.widget-comments-container{max-width:550px;margin-left:10px;margin-right:10px;}div#widget-comments-container div.wpdiscuz-widgets-content{padding-right:10px;padding-left:10px;}div.widget-comments-container>div,div.widget-comments-container>ul>.tab-title-list-active-item{background-color:rgba(255, 255, 255, 0);}#widget-comments-container ul.wpdiscuz-widgets-tab-title-list li.tab-title-list-active-item{border-top-color:#20252B}#widget-comments-container .wpd_widgets_items_wrapper .slick-arrow{background:#20252B;} #widget-comments-container{font-size:100%}</style>
+        <link rel='preload' href='https://blockgeeks.com/wp-includes/js/jquery/jquery.js' as='script'/>      <meta name="onesignal" content="wordpress-plugin"/>
+            <script>
+
+      window.OneSignal = window.OneSignal || [];
+
+      OneSignal.push( function() {
+        OneSignal.SERVICE_WORKER_UPDATER_PATH = "OneSignalSDKUpdaterWorker.js.php";
+                      OneSignal.SERVICE_WORKER_PATH = "OneSignalSDKWorker.js.php";
+                      OneSignal.SERVICE_WORKER_PARAM = { scope: "/" };
+        OneSignal.setDefaultNotificationUrl("https://blockgeeks.com");
+        var oneSignal_options = {};
+        window._oneSignalInitOptions = oneSignal_options;
+
+        oneSignal_options['wordpress'] = true;
+oneSignal_options['appId'] = '85035b6b-70dc-4bcb-a6e9-5d406906044e';
+oneSignal_options['allowLocalhostAsSecureOrigin'] = true;
+oneSignal_options['welcomeNotification'] = { };
+oneSignal_options['welcomeNotification']['title'] = "";
+oneSignal_options['welcomeNotification']['message'] = "";
+oneSignal_options['path'] = "https://blockgeeks.com/wp-content/plugins/onesignal-free-web-push-notifications/sdk_files/";
+oneSignal_options['safari_web_id'] = "web.onesignal.auto.37e682f0-44ba-408e-8045-bbc89f9e01bb";
+oneSignal_options['promptOptions'] = { };
+                OneSignal.init(window._oneSignalInitOptions);
+                OneSignal.showSlidedownPrompt();      });
+
+      function documentInitOneSignal() {
+        var oneSignal_elements = document.getElementsByClassName("OneSignal-prompt");
+
+        var oneSignalLinkClickHandler = function(event) { OneSignal.push(['registerForPushNotifications']); event.preventDefault(); };        for(var i = 0; i < oneSignal_elements.length; i++)
+          oneSignal_elements[i].addEventListener('click', oneSignalLinkClickHandler, false);
+      }
+
+      if (document.readyState === 'complete') {
+           documentInitOneSignal();
+      }
+      else {
+           window.addEventListener("load", function(event){
+               documentInitOneSignal();
+          });
+      }
+    </script>
+<script>
+  window.ajaxurl =
+    "https://blockgeeks.com/no-admin-ajax/"
+  window.WPBannerize = {
+    "General": {
+        "impressions_enabled": "1",
+        "clicks_enabled": "1"
+    },
+    "Layout": {
+        "top": "5",
+        "right": 0,
+        "bottom": "5",
+        "left": 0
+    }
+} ;
+</script>
+<style>:root {
+    --sgi-ltrav-border-radius: 50%;
+    --sgi-ltrav-bg: #24b2fa;
+    --sgi-ltrav-color: #FFF;
+    --sgi-ltrav-text-transform: uppercase;
+    --sgi-ltrav-font-family: "Roboto";
+    --sgi-ltrav-font-weight: 400;
+    --sgi-ltrav-font-style: regular;
+    
+}   
+
+#wp-toolbar .sgi-letter-avatar {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 16px !important;
+    width: 16px !important;
+    margin: -4px 0 0 6px;
+    line-height: 24px !important;
+}
+
+#wp-toolbar .sgi-letter-avatar > span {
+
+    line-height: 16px !important;
+    font-size: 11px !important;
+    text-align: center;
+    display: block;
+
+
+}
+
+#buddypress ul.item-list li .sgi-letter-avatar {
+    float:left;
+    margin:0 10px 0 0;
+}
+
+.sgi-letter-avatar{
+    background-color: var(--sgi-ltrav-bg);
+    text-align: center;
+    border-radius: var(--sgi-ltrav-border-radius) !important;
+}
+
+.sgi-letter-avatar > span{
+    color: var(--sgi-ltrav-color);
+    display: block;
+    text-transform: var(--sgi-ltrav-text-transform);
+    font-family: var(--sgi-ltrav-font-family);
+    font-weight: var(--sgi-ltrav-font-weight);
+    font-style: var(--sgi-ltrav-font-style);
+    font-size: var(--sgi-ltrav-font-size);
+}</style><link rel="icon" href="https://blockgeeks.com/wp-content/uploads/2020/02/Favicon.ico" sizes="32x32" />
+<link rel="icon" href="https://blockgeeks.com/wp-content/uploads/2020/02/Favicon.ico" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://blockgeeks.com/wp-content/uploads/2020/02/Favicon.ico" />
+<meta name="msapplication-TileImage" content="https://blockgeeks.com/wp-content/uploads/2020/02/Favicon.ico" />
+		<style  id="wp-custom-css">
+			.wrap-over {
+	min-height: 750px;
+}
+.wrap-over .smcx-widget {
+	margin: 0 auto;
+	height: auto;
+	position: relative !important;
+}
+		</style>
+		    </head>
+
+<body class="wpbdp_listing-template-default single single-wpbdp_listing postid-155446 group-blog user-not-enrolled wpbdp-with-button-styles business-directory wpbdp-view-show_listing wpbdp-wp-theme-blockgeeks wpbdp-theme-default aa-prefix-block-">
+
+
+
+<a id="close-sidenav" href="javascript:void(0)" class="closebtn close-sidenav"></a>
+<div id="mySidenav" class="sidenav">
+    <div class="mobile-search">
+        <form  role="search" method="get" class="search-wrapper hidden-on-mobile" action="https://blockgeeks.com">
+    <button aria-label="Search" class="search-img"></button>
+    <label style="font-size: 0;"> Search
+        <input  value="" name="s" class="search link-item" onkeyup="this.setAttribute('value', this.value);" type="text" placeholder="Search" autocomplete="off" autocapitalize="off" />
+    </label>
+    <div class="close-search-icon toggle-search-js"></div>
+</form>
+<div class="open-search-img toggle-search-js"></div>
+    </div>
+    <div class="sidenav-main-links sidenav-main-mobile-links">
+        <span itemscope itemtype="http://schema.org/SiteNavigationElement">
+        <ul id="mobile-top-menu" class="mobile-top-menu"><li id="menu-item-145688" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-145688"><a href="https://courses.blockgeeks.com/course-library/" itemprop="url">Courses<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li id="menu-item-145690" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145690"><a href="https://courses.blockgeeks.com/track-list/" itemprop="url">Learning Tracks</a></li>
+	<li id="menu-item-150466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150466"><a href="https://blockgeeks.com/subscriptions/" itemprop="url">Pricing Plans</a></li>
+	<li id="menu-item-145702" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145702"><a href="https://blockgeeks.com/certificate-of-completion-verified-on-ethereum-blockchain/" itemprop="url">Certificates of Completion</a></li>
+	<li id="menu-item-150276" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150276"><a href="https://courses.blockgeeks.com/my-courses/" itemprop="url">My Courses</a></li>
+	<li id="menu-item-145691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145691"><a href="https://courses.blockgeeks.com/course-library/" itemprop="url">Course Library</a></li>
+	<li id="menu-item-164806" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164806"><a href="https://courses.blockgeeks.com/course-track/cryptocurrency-investors/" itemprop="url">Investor Course</a></li>
+</ul>
+</li>
+<li id="menu-item-145706" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-145706"><a href="https://blockgeeks.com/guides/?sort=latest" itemprop="url">Guides<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li id="menu-item-183109" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-183109"><a itemprop="url">Blockchain<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+	<ul class="sub-menu">
+		<li id="menu-item-183296" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183296"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20for%20Business" itemprop="url">Blockchain for Business</a></li>
+		<li id="menu-item-183297" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183297"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20for%20Investors" itemprop="url">Blockchain for Investors</a></li>
+		<li id="menu-item-183298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183298"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20for%20intermediate" itemprop="url">Blockchain for Intermediate</a></li>
+		<li id="menu-item-183299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183299"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20for%20Developers" itemprop="url">Blockchain for Developers</a></li>
+		<li id="menu-item-183300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183300"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20startups" itemprop="url">Startups</a></li>
+	</ul>
+</li>
+	<li id="menu-item-183301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-183301"><a itemprop="url">Cryptocurrency<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+	<ul class="sub-menu">
+		<li id="menu-item-183302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183302"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=DeFi" itemprop="url">DeFi</a></li>
+		<li id="menu-item-183303" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183303"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Crypto%20for%20investors" itemprop="url">Crypto for Investors</a></li>
+		<li id="menu-item-183304" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183304"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=security" itemprop="url">Security</a></li>
+	</ul>
+</li>
+	<li id="menu-item-183305" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-183305"><a itemprop="url">Blockchain Community<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+	<ul class="sub-menu">
+		<li id="menu-item-183306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183306"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=rsk" itemprop="url">RSK</a></li>
+		<li id="menu-item-183307" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183307"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=aion-network" itemprop="url">Aion Network</a></li>
+		<li id="menu-item-183308" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183308"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=cosmos" itemprop="url">Cosmos</a></li>
+		<li id="menu-item-183309" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183309"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=makerdao" itemprop="url">MakerDao</a></li>
+		<li id="menu-item-183310" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183310"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=malta" itemprop="url">Malta</a></li>
+	</ul>
+</li>
+	<li id="menu-item-164709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164709"><a href="https://blockgeeks.com/guides/what-is-cryptocurrency/" itemprop="url">Cryptocurrency 101</a></li>
+	<li id="menu-item-181306" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-181306"><a href="/guides/how-to-invest-in-cryptocurrencies/" itemprop="url">How to Invest in Cryptocurrency</a></li>
+	<li id="menu-item-164705" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164705"><a href="https://blockgeeks.com/guides/ethereum/" itemprop="url">Ethereum 101</a></li>
+	<li id="menu-item-164771" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164771"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=defi" itemprop="url">DeFi 101</a></li>
+	<li id="menu-item-164706" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164706"><a href="https://blockgeeks.com/guides/what-is-blockchain-technology/" itemprop="url">Blockchain 101</a></li>
+	<li id="menu-item-164707" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164707"><a href="https://blockgeeks.com/guides/what-is-bitcoin/" itemprop="url">Bitcoin 101</a></li>
+	<li id="menu-item-145709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145709"><a href="https://blockgeeks.com/blockchain-infographics/" itemprop="url">Infographics</a></li>
+	<li id="menu-item-145708" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145708"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=videos" itemprop="url">Videos</a></li>
+</ul>
+</li>
+<li id="menu-item-183071" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-183071"><a href="https://blockgeeks.com/articles/" itemprop="url">Articles<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li id="menu-item-183072" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183072"><a href="https://blockgeeks.com/best-canadian-cryptocurrency-exchanges/" itemprop="url">Best Canadian Cryptocurrency</a></li>
+	<li id="menu-item-183073" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183073"><a href="https://blockgeeks.com/cryptocurrency-investing/" itemprop="url">How to invest in Cryptocurrency</a></li>
+	<li id="menu-item-183074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183074"><a href="https://blockgeeks.com/blockchain-developer-salary/" itemprop="url">Blockchain Developer Salary</a></li>
+	<li id="menu-item-183075" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183075"><a href="https://blockgeeks.com/5-benefits-cryptocurrency/" itemprop="url">Benefits of Cryptocurrency</a></li>
+	<li id="menu-item-183076" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183076"><a href="https://blockgeeks.com/cryptocurrency-safe/" itemprop="url">How To Keep Your Cryptocurrency Safe</a></li>
+	<li id="menu-item-183077" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183077"><a href="https://blockgeeks.com/how-to-setup-an-ethereum-wallet-and-buy-a-custom-token-a-guide-for-coinbase-users/" itemprop="url">How To Setup An Ethereum Wallet</a></li>
+	<li id="menu-item-183078" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183078"><a href="https://blockgeeks.com/what-is-hashing-digital-signature-in-the-blockchain/" itemprop="url">Hashing &#038; Digital Signature</a></li>
+	<li id="menu-item-183079" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183079"><a href="https://blockgeeks.com/is-bitcoin-real-money/" itemprop="url">Is Bitcoin Real Money?</a></li>
+</ul>
+</li>
+<li id="menu-item-182181" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-182181"><a href="https://blockgeeks.com/bootcamp/cryptoschool.html" itemprop="url">Crypto Investment School</a></li>
+<li id="menu-item-152145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-152145"><a href="https://blockgeeks.com/blockchain-community/" itemprop="url">Community<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li id="menu-item-153524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153524"><a href="https://blockgeeks.com/ask-blockchain-community/" itemprop="url">Ask Blockchain Community</a></li>
+	<li id="menu-item-152877" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152877"><a href="https://blockgeeks.com/community-partners/" itemprop="url">Partners Directory</a></li>
+</ul>
+</li>
+<li id="menu-item-163201" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-163201"><a href="https://blockgeeks.com/blockchain-partnership/" itemprop="url">Advertise with us</a></li>
+<li id="menu-item-145732" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-145732"><a href="https://blockgeeks.com/about/" itemprop="url">About<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li id="menu-item-151617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151617"><a href="https://blockgeeks.com/contact-us/" itemprop="url">Contact us</a></li>
+	<li id="menu-item-183129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183129"><a href="https://blockgeeks.com/authors/" itemprop="url">Authors</a></li>
+</ul>
+</li>
+</ul>        </span>
+    </div>
+
+</div>
+
+    <div>
+
+        <header>
+            <div class="main-header clearfix">
+
+        <div class="header-wrapper-top hidden-xs hidden-sm hidden-md">
+
+            <a href="https://blockgeeks.com" rel="home" class="logo">
+            </a>
+
+            <nav itemscope itemtype="http://schema.org/SiteNavigationElement" class="main-nav ">
+                <ul id="top-menu" class=""><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-145688"><a href="https://courses.blockgeeks.com/course-library/" itemprop="url">Courses<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145690"><a href="https://courses.blockgeeks.com/track-list/" itemprop="url">Learning Tracks</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-150466"><a href="https://blockgeeks.com/subscriptions/" itemprop="url">Pricing Plans</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145702"><a href="https://blockgeeks.com/certificate-of-completion-verified-on-ethereum-blockchain/" itemprop="url">Certificates of Completion</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-150276"><a href="https://courses.blockgeeks.com/my-courses/" itemprop="url">My Courses</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145691"><a href="https://courses.blockgeeks.com/course-library/" itemprop="url">Course Library</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164806"><a href="https://courses.blockgeeks.com/course-track/cryptocurrency-investors/" itemprop="url">Investor Course</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-145706"><a href="https://blockgeeks.com/guides/?sort=latest" itemprop="url">Guides<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-183109"><a itemprop="url">Blockchain<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183296"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20for%20Business" itemprop="url">Blockchain for Business</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183297"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20for%20Investors" itemprop="url">Blockchain for Investors</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183298"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20for%20intermediate" itemprop="url">Blockchain for Intermediate</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183299"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20for%20Developers" itemprop="url">Blockchain for Developers</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183300"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Blockchain%20startups" itemprop="url">Startups</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-183301"><a itemprop="url">Cryptocurrency<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183302"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=DeFi" itemprop="url">DeFi</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183303"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=Crypto%20for%20investors" itemprop="url">Crypto for Investors</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183304"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=security" itemprop="url">Security</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-183305"><a itemprop="url">Blockchain Community<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183306"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=rsk" itemprop="url">RSK</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183307"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=aion-network" itemprop="url">Aion Network</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183308"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=cosmos" itemprop="url">Cosmos</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183309"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=makerdao" itemprop="url">MakerDao</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183310"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=malta" itemprop="url">Malta</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164709"><a href="https://blockgeeks.com/guides/what-is-cryptocurrency/" itemprop="url">Cryptocurrency 101</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-181306"><a href="/guides/how-to-invest-in-cryptocurrencies/" itemprop="url">How to Invest in Cryptocurrency</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164705"><a href="https://blockgeeks.com/guides/ethereum/" itemprop="url">Ethereum 101</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164771"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=defi" itemprop="url">DeFi 101</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164706"><a href="https://blockgeeks.com/guides/what-is-blockchain-technology/" itemprop="url">Blockchain 101</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164707"><a href="https://blockgeeks.com/guides/what-is-bitcoin/" itemprop="url">Bitcoin 101</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145709"><a href="https://blockgeeks.com/blockchain-infographics/" itemprop="url">Infographics</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-145708"><a href="https://blockgeeks.com/guides/?tagfilter=true&#038;filter=videos" itemprop="url">Videos</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-183071"><a href="https://blockgeeks.com/articles/" itemprop="url">Articles<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183072"><a href="https://blockgeeks.com/best-canadian-cryptocurrency-exchanges/" itemprop="url">Best Canadian Cryptocurrency</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183073"><a href="https://blockgeeks.com/cryptocurrency-investing/" itemprop="url">How to invest in Cryptocurrency</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183074"><a href="https://blockgeeks.com/blockchain-developer-salary/" itemprop="url">Blockchain Developer Salary</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183075"><a href="https://blockgeeks.com/5-benefits-cryptocurrency/" itemprop="url">Benefits of Cryptocurrency</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183076"><a href="https://blockgeeks.com/cryptocurrency-safe/" itemprop="url">How To Keep Your Cryptocurrency Safe</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183077"><a href="https://blockgeeks.com/how-to-setup-an-ethereum-wallet-and-buy-a-custom-token-a-guide-for-coinbase-users/" itemprop="url">How To Setup An Ethereum Wallet</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183078"><a href="https://blockgeeks.com/what-is-hashing-digital-signature-in-the-blockchain/" itemprop="url">Hashing &#038; Digital Signature</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-183079"><a href="https://blockgeeks.com/is-bitcoin-real-money/" itemprop="url">Is Bitcoin Real Money?</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-182181"><a href="https://blockgeeks.com/bootcamp/cryptoschool.html" itemprop="url">Crypto Investment School</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-152145"><a href="https://blockgeeks.com/blockchain-community/" itemprop="url">Community<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-153524"><a href="https://blockgeeks.com/ask-blockchain-community/" itemprop="url">Ask Blockchain Community</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-152877"><a href="https://blockgeeks.com/community-partners/" itemprop="url">Partners Directory</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-163201"><a href="https://blockgeeks.com/blockchain-partnership/" itemprop="url">Advertise with us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-145732"><a href="https://blockgeeks.com/about/" itemprop="url">About<svg class="icon icon-angle-down" aria-hidden="true" role="img"> <use href="#icon-angle-down" xlink:href="#icon-angle-down"></use> </svg></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151617"><a href="https://blockgeeks.com/contact-us/" itemprop="url">Contact us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-183129"><a href="https://blockgeeks.com/authors/" itemprop="url">Authors</a></li>
+</ul>
+</li>
+</ul>            </nav>
+        </div>
+
+        <div class="user-block hidden-xs hidden-sm hidden-md">
+            <div class="search-form-wrapper">
+                <div class="search-bg">
+                    <form  role="search" method="get" class="search-wrapper hidden-on-mobile" action="https://blockgeeks.com">
+    <button aria-label="Search" class="search-img"></button>
+    <label style="font-size: 0;"> Search
+        <input  value="" name="s" class="search link-item" onkeyup="this.setAttribute('value', this.value);" type="text" placeholder="Search" autocomplete="off" autocapitalize="off" />
+    </label>
+    <div class="close-search-icon toggle-search-js"></div>
+</form>
+<div class="open-search-img toggle-search-js"></div>
+                </div>
+            </div>
+                            <a href="https://blockgeeks.com/login/" class="link-item login-btn">Login</a>
+                        
+                            <a href="https://courses.blockgeeks.com/enrollment/" class="trial green-trial">Free Trial</a>
+                    </div>
+
+
+    <!-- MOBILE HEADER START -->
+    <div class="mobile-header hidden-lg">
+        <div class="floor-1">
+            <div class="side-menu" id="opennav"></div>
+            <a href="https://blockgeeks.com" class="mobile-logo-link">
+                <img src="/wp-content/themes/blockgeeks/img/mobile-logo.svg" alt="mobile-logo-blockgeeks">
+            </a>
+                            <a href="https://blockgeeks.com/login/" class="mobile-login">Login</a>
+            
+                    </div>
+            </div>
+    <!-- MOBILE HEADER END -->
+</div>
+        </header>
+
+        <section id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main page-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+    
+                        
+<article id="post-0" class="post-0 page type-page status-draft hentry wpbdp-view-content-wrapper">
+	<header class="filter-title-pad text-center hide-for-large">
+    
+	</header>
+
+	<div class="entry-content">
+		<div id="wpbdp-listing-155446" class="wpbdp-listing-155446 wpbdp-listing single wpbdp-single wpbdp-listing-single wpbdp-listing-plan-id-6 wpbdp-listing-plan-start wpbdp-listing-category-id-4315 with-image">
+        <div class="listing-title">
+        <h2>OpenSea</h2>
+    </div>
+                
+    <div class="listing-actions cf">
+<div style="display: inline;" class="back-to-dir-buttons"><input type="button" value="← Return to Directory" onclick="window.location.href = 'https://blockgeeks.com/community-partners/'" class="wpbdp-hide-on-mobile button back-to-dir wpbdp-button" /><input type="button" value="←" onclick="window.location.href = 'https://blockgeeks.com/community-partners/'" class="wpbdp-show-on-mobile button back-to-dir wpbdp-button" /></div></div>
+        <div class="listing-thumbnail"><a href="https://blockgeeks.com/wp-content/uploads/2020/03/opensealogo.png" target="" class="thickbox" title="" data-lightbox="wpbdpgal" rel="wpbdpgal" data-rel="lightbox-image-0" data-rl_title="" data-rl_caption=""><img width="150" height="150" src="https://blockgeeks.com/wp-content/uploads/2020/03/opensealogo-150x150.png" class="wpbdp-thumbnail attachment-wpbdp-thumb wpbdp-single-thumbnail" alt="OpenSea" loading="lazy" title="OpenSea" srcset="https://blockgeeks.com/wp-content/uploads/2020/03/opensealogo-150x150.png 150w, https://blockgeeks.com/wp-content/uploads/2020/03/opensealogo-50x50.png 50w, https://blockgeeks.com/wp-content/uploads/2020/03/opensealogo.png 200w" sizes="(max-width: 150px) 100vw, 150px" /></a></div>
+<div class="listing-details cf">
+            <div class="wpbdp-field-display wpbdp-field wpbdp-field-value field-display field-value wpbdp-field-company_name wpbdp-field-title wpbdp-field-type-textfield wpbdp-field-association-title  " ><span class="field-label">Company Name:</span> <span class="value">OpenSea</span></div>            <div class="wpbdp-field-display wpbdp-field wpbdp-field-value field-display field-value wpbdp-field-category wpbdp-field-category wpbdp-field-type-select wpbdp-field-association-category  " ><span class="field-label">Category:</span> <span class="value"><a href="https://blockgeeks.com/community-partners/Partners_category/collectibles/" rel="tag">Collectibles</a></span></div>            <div class="wpbdp-field-display wpbdp-field wpbdp-field-value field-display field-value wpbdp-field-short_description wpbdp-field-excerpt wpbdp-field-type-textarea wpbdp-field-association-excerpt  " ><span class="field-label">Short Description:</span> <span class="value">The largest marketplace for crypto collectibles</span></div>            <div class="wpbdp-field-display wpbdp-field wpbdp-field-value field-display field-value wpbdp-field-long_description wpbdp-field-content wpbdp-field-type-textarea wpbdp-field-association-content  " ><span class="field-label">Long Description:</span> <span class="value"><p>Build a beautiful marketplace for your ERC721 or ERC1155 assets for free, and earn revenue on every secondary sale of your items. Automatically show your users their own collectibles, and become an OpenSea affiliate to monetize your user base.</p>
+</span></div>            <div class="wpbdp-field-display wpbdp-field wpbdp-field-value field-display field-value wpbdp-field-website wpbdp-field-meta wpbdp-field-type-url wpbdp-field-association-meta  " ><span class="field-label">Website:</span> <span class="value"><a href="https://opensea.io/" rel="" target="_self" title="OpenSea">OpenSea</a></span></div>    
+                <div class="social-fields cf"></div>
+    </div>
+
+
+</div>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"LocalBusiness","name":"OpenSea","url":"https:\/\/blockgeeks.com\/community-partners\/opensea\/","image":"https:\/\/blockgeeks.com\/wp-content\/uploads\/2020\/03\/opensealogo.png","priceRange":"$$","description":"The largest marketplace for crypto collectibles"}</script><div class="swp-content-locator"></div>	</div><!-- .entry-content -->
+
+	</article><!-- #post-## -->
+    
+                    </div>
+                </div>
+            </div>
+			<div class="clearfix"></div>
+
+		</main>
+	</div>
+
+
+</section>
+</div>
+</div>
+</div>
+
+<footer itemscope itemtype="http://schema.org/WPFooter" id="footer">
+    <div class="footer-inner-wrapper footer-inner-wrapper-new">
+   <meta itemprop="copyrightHolder" content="Blockgeeks">
+    <div class="copyright">
+        <a href="https://blockgeeks.com" rel="home" class="logo">
+            <object width="130" height="37" style="width:130px" data="https://blockgeeks.com/wp-content/themes/blockgeeks/img/logo.svg" type="image/svg+xml">
+                <img width="130" height="37" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/logo_.png" alt="Blockgeeks" />
+            </object>
+        </a>
+        &copy; 2022 Blockgeeks
+    </div>
+    <div class="footer-links">
+        <a href='https://blockgeeks.com/bootcamp/cryptoschool.html'>Crypto Investment School</a>
+<a href='https://courses.blockgeeks.com/course-library/'>Course Library</a>
+<a href='https://blockgeeks.com/guides/'>Guides</a>
+<a href='https://blockgeeks.com/articles/'>Articles</a>
+<a href='https://blockgeeks.com/blockchain-partnership/'>Partnerships</a>
+<a href='https://blockgeeks.com/blockchain-infographics/'>Infographics</a>
+<a href='https://blockgeeks.com/blockchain-partnership/'>Advertise With Us</a>
+<a href='https://blockgeeks.com/guest-post-submissions/'>Contribute</a>
+<a href='https://courses.blockgeeks.com/faq/'>FAQ</a>
+<a href='https://blockgeeks.freshdesk.com/support/home'>Support</a>
+<a href='https://blockgeeks.com/privacy-policy/'>Privacy</a>
+<a href='https://blockgeeks.com/terms/'>Terms</a>
+<a href='https://courses.blockgeeks.com/affiliates/'>Affiliates</a>
+<a href='https://blockgeeks.com/contact-us/'>Contact Us</a>
+<a href='https://blockgeeks.com/authors/'>Authors</a>    </div>
+    <div class="social-icons">
+        <a href="https://medium.com/@Blockgeeks"><img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/media.svg" alt="media"></a>
+        <a href="https://www.youtube.com/channel/UCd8CDrm6rvwBZc6g7BYAkfQ"><img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/youtube.svg" alt="yo"></a>
+        <a href="https://www.linkedin.com/company/blockgeeks"><img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/ln.svg" alt="ln"></a>
+        <a href="https://twitter.com/blockgks"><img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/tw.svg" alt="tw"></a>
+        <a href="https://www.instagram.com/blockgeeks/"><img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/ins.svg" alt="ins"></a>
+        <a href="https://www.facebook.com/Blockgeeks/"><img height="24" width="24" src="https://blockgeeks.com/wp-content/themes/blockgeeks/img/fb.svg" alt="fb"></a>
+    </div>
+</div>
+</footer>
+        <script>
+      $(document).ready(function() {
+        window.amplitudeEventer = new AmplitudeEventer ("b2fed0f098679a164e776e750132ef4b");
+                });
+    </script>
+<script>
+// Set to false if opt-in required
+var trackByDefault = true;
+
+function acEnableTracking() {
+	var expiration = new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 30);
+	document.cookie = "ac_enable_tracking=1; expires= " + expiration + "; path=/";
+	acTrackVisit();
+}
+
+function acTrackVisit() {
+	var trackcmp_email = '';
+	var trackcmp = document.createElement("script");
+	trackcmp.async = true;
+	trackcmp.type = 'text/javascript';
+	trackcmp.src = '//trackcmp.net/visit?actid=223361613&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+	var trackcmp_s = document.getElementsByTagName("script");
+	if (trackcmp_s.length) {
+		trackcmp_s[0].parentNode.appendChild(trackcmp);
+	} else {
+		var trackcmp_h = document.getElementsByTagName("head");
+		trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+	}
+}
+
+if (trackByDefault || /(^|; )ac_enable_tracking=([^;]+)/.test(document.cookie)) {
+	acEnableTracking();
+}
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9RDC58"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><div class="wpdiscuz-fem-email" style="display: none;"></div><div class="wpdiscuz-fem-email-form" style="display: none;"><span class="wpdiscuz-fem-author">You are going to send email to </span><i class="fas fa-times"></i><div class="wpdiscuz_clear"></div><input placeholder="Email Subject" type="text" class="wpdiscuz-fem-subj" value="" /><textarea class="wpdiscuz-fem-msg" placeholder="Enter your message here"></textarea><br /><div class="wpdiscuz-fem-button-align"><button type="button" class="wpdiscuz-fem-send">Send</button></div><input type="hidden" id="wpdiscuz_fem_email_comment_id" /></div><div class="wpdiscuz-fem-moving" style="display: none;"></div><div class="wpdiscuz-fem-move-form" style="display: none;"><span class="wpdiscuz-fem-author">Move Comment<br /></span><i class="fas fa-times"></i><div class="wpdiscuz_clear"></div><div class="wpdiscuz-fem-posts-search"><input type="text" class="wpdiscuz-fem-post" placeholder="Enter post title..." /><div class="wpdiscuz-fem-posts"></div></div><div class="wpdiscuz-fem-button-align"><button type="button" class="wpdiscuz-fem-move">Move</button></div><input type="hidden" id="wpdiscuz_fem_move_comment_id" /></div><link data-minify="1" rel='stylesheet' id='simple-favorites-css'  href='https://blockgeeks.com/wp-content/cache/min/1/wp-content/plugins/favorites/assets/css/favorites-5c543ec92e21fd5480e049d4d5376e9d.css'  media='all' />
+<script    src='https://blockgeeks.com/wp-content/plugins/wp-bannerize-pro/public/js/wp-bannerize-impressions.min.js' id='wp_bannerize_pro_slugwp-bannerize-impressionsminjs-js'></script>
+<script  id='copy-the-code-js-extra'>
+/* <![CDATA[ */
+var copyTheCode = {"copy_content_as":"","previewMarkup":"<h2>Hello World<\/h2>","buttonMarkup":"<button class=\"copy-the-code-button\" title=\"\"><\/button>","buttonSvg":"<svg viewBox=\"-21 0 512 512\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"><path d=\"m186.667969 416c-49.984375 0-90.667969-40.683594-90.667969-90.667969v-218.664062h-37.332031c-32.363281 0-58.667969 26.300781-58.667969 58.664062v288c0 32.363281 26.304688 58.667969 58.667969 58.667969h266.664062c32.363281 0 58.667969-26.304688 58.667969-58.667969v-37.332031zm0 0\"><\/path><path d=\"m469.332031 58.667969c0-32.40625-26.261719-58.667969-58.664062-58.667969h-224c-32.40625 0-58.667969 26.261719-58.667969 58.667969v266.664062c0 32.40625 26.261719 58.667969 58.667969 58.667969h224c32.402343 0 58.664062-26.261719 58.664062-58.667969zm0 0\"><\/path><\/svg>","selectors":[{"selector":".copy-text-content","style":"button","button_text":"Copy","button_title":"Copy to Clipboard","button_copy_text":"Copied!","button_position":"inside"}],"selector":"pre","settings":{"selector":".copy-text-content","button-text":"Copy","button-title":"Copy to Clipboard","button-copy-text":"Copied!","button-position":"inside"},"string":{"title":"Copy to Clipboard","copy":"Copy","copied":"Copied!"},"image-url":"https:\/\/blockgeeks.com\/wp-content\/plugins\/copy-the-code\/\/assets\/images\/copy-1.svg"};
+/* ]]> */
+</script>
+<script    src='https://blockgeeks.com/wp-content/plugins/copy-the-code/assets/js/copy-the-code.js' id='copy-the-code-js'></script>
+<script  id='dw-verify-js-js-extra'>
+/* <![CDATA[ */
+var dwverify = {"ajaxurl":"https:\/\/blockgeeks.com\/no-admin-ajax\/","confirm_text":"Are you sure you want to re-send verification link?"};
+/* ]]> */
+</script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/plugins/email-verification-on-signups/assets/js/verify-email.js' id='dw-verify-js-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/wpdiscuz/assets/third-party/wpdccjs/wpdcc.js' id='wpdiscuz-cookie-js-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/wpdiscuz/assets/third-party/autogrow/jquery.autogrowtextarea.min.js' id='autogrowtextarea-js-js'></script>
+<script    src='https://blockgeeks.com/wp-includes/js/jquery/jquery.form.min.js' id='jquery-form-js'></script>
+<script  id='wpdiscuz-ajax-js-js-extra'>
+/* <![CDATA[ */
+var wpdiscuzAjaxObj = {"url":"https:\/\/blockgeeks.com\/no-admin-ajax\/","customAjaxUrl":"https:\/\/blockgeeks.com\/wp-content\/plugins\/wpdiscuz\/utils\/ajax\/wpdiscuz-ajax.php","wpdiscuz_options":{"wc_hide_replies_text":"Hide Replies","wc_show_replies_text":"View Replies","wc_msg_required_fields":"Please fill out required fields","wc_invalid_field":"Some of field value is invalid","wc_error_empty_text":"please fill out this field to comment","wc_error_url_text":"url is invalid","wc_error_email_text":"email address is invalid","wc_invalid_captcha":"Invalid Captcha Code","wc_login_to_vote":"You Must Be Logged In To Vote","wc_deny_voting_from_same_ip":"You are not allowed to vote for this comment","wc_self_vote":"You cannot vote for your comment","wc_vote_only_one_time":"You&#039;ve already voted for this comment","wc_voting_error":"Voting Error","wc_held_for_moderate":"Comment awaiting moderation","wc_comment_edit_not_possible":"Sorry, this comment no longer possible to edit","wc_comment_not_updated":"Sorry, the comment was not updated","wc_comment_not_edited":"You&#039;ve not made any changes","wc_new_comment_button_text":"new comment","wc_new_comments_button_text":"new comments","wc_new_reply_button_text":"new reply on your comment","wc_new_replies_button_text":"new replies on your comments","wc_msg_input_min_length":"Input is too short","wc_msg_input_max_length":"Input is too long","wc_follow_user":"Follow this user","wc_unfollow_user":"Unfollow this user","wc_follow_success":"You started following this comment author","wc_follow_canceled":"You stopped following this comment author.","wc_follow_email_confirm":"Please check your email and confirm the user following request.","wc_follow_email_confirm_fail":"Sorry, we couldn&#039;t send confirmation email.","wc_follow_login_to_follow":"Please login to follow users.","wc_follow_impossible":"We are sorry, but you can&#039;t follow this user.","wc_follow_not_added":"Following failed. Please try again later.","is_user_logged_in":false,"commentListLoadType":"2","commentListUpdateType":"0","commentListUpdateTimer":"600","liveUpdateGuests":"1","wc_comment_bg_color":"#FEFEFE","wc_reply_bg_color":"#F8F8F8","wpdiscuzCommentsOrder":"desc","wpdiscuzCommentOrderBy":"comment_date_gmt","commentsVoteOrder":false,"wordpressThreadCommentsDepth":"2","wordpressIsPaginate":"","commentTextMaxLength":3000,"storeCommenterData":100000,"isCaptchaInSession":true,"isGoodbyeCaptchaActive":false,"socialLoginAgreementCheckbox":0,"enableFbLogin":0,"enableFbShare":0,"facebookAppID":"","facebookUseOAuth2":0,"enableGoogleLogin":0,"googleAppID":"","cookiehash":"f9367bf9bef09daf2e0d5ea5a86cdd07","isLoadOnlyParentComments":0,"ahk":"","enableDropAnimation":1,"isNativeAjaxEnabled":1,"cookieCommentsSorting":"wpdiscuz_comments_sorting","enableLastVisitCookie":1,"version":"5.3.5","wc_post_id":155446,"loadLastCommentId":0,"lastVisitKey":"wpdiscuz_last_visit","lastVisitExpires":1647246947,"lastVisitCookie":1644654947,"isCookiesEnabled":true,"wc_captcha_show_for_guest":"0","wc_captcha_show_for_members":"0","is_email_field_required":1,"wpdumc_text_posts":"Posts","wpdumc_text_comments":"Comments","wpdumc_is_id_mentioning":0,"wpdumc_displayNicename":0,"confirm_approve":"Are you sure you want to set this comment as approved?","confirm_unapprove":"Are you sure you want to set this comment as unapproved?","confirm_trash":"Are you sure you want to set this comment as trashed?","confirm_spam":"Are you sure you want to set this comment as spam?","confirm_blacklist":"Are you sure you want to move this user into blacklist?","confirm_delete":"Are you sure you want to delete this comment?","please_fill":"Please fill out the field","choose_post":"Please choose post"}};
+/* ]]> */
+</script>
+<script   data-wpacu-to-be-preloaded-basic='1'  defer="defer" src='https://blockgeeks.com/wp-content/plugins/wpdiscuz/assets/js/wpdiscuz.js' id='wpdiscuz-ajax-js-js'></script>
+<script  id='quicktags-js-extra'>
+/* <![CDATA[ */
+var quicktagsL10n = {"closeAllOpenTags":"Close all open tags","closeTags":"close tags","enterURL":"Enter the URL","enterImageURL":"Enter the URL of the image","enterImageDescription":"Enter a description of the image","textdirection":"text direction","toggleTextdirection":"Toggle Editor Text Direction","dfw":"Distraction-free writing mode","strong":"Bold","strongClose":"Close bold tag","em":"Italic","emClose":"Close italic tag","link":"Insert link","blockquote":"Blockquote","blockquoteClose":"Close blockquote tag","del":"Deleted text (strikethrough)","delClose":"Close deleted text tag","ins":"Inserted text","insClose":"Close inserted text tag","image":"Insert image","ul":"Bulleted list","ulClose":"Close bulleted list tag","ol":"Numbered list","olClose":"Close numbered list tag","li":"List item","liClose":"Close list item tag","code":"Code","codeClose":"Close code tag","more":"Insert Read More tag"};
+/* ]]> */
+</script>
+<script    src='https://blockgeeks.com/wp-includes/js/quicktags.min.js' id='quicktags-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/wpdiscuz/assets/third-party/quicktags/wpdiscuz-quictags.js' id='wpdiscuz-quicktags-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/wpdiscuz-user-comment-mentioning/js/third-party/jquery.caret.min.js' id='caret-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/wpdiscuz-user-comment-mentioning/js/third-party/jquery.atwho.min.js' id='atwho-js'></script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/themes/blockgeeks/assets/js/wordpress-plugins/wpdiscuz/wpdiscuz-ucm.js' id='wpdumc-script-js'></script>
+<script  id='social_warfare_script-js-extra'>
+/* <![CDATA[ */
+var socialWarfare = {"addons":["pro"],"post_id":"155446","variables":{"emphasizeIcons":"0","powered_by_toggle":false,"affiliate_link":"https:\/\/warfareplugins.com"},"floatBeforeContent":""};
+/* ]]> */
+</script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/plugins/social-warfare/assets/js/script.min.js' id='social_warfare_script-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/business-directory-plugin/assets/js/recaptcha.min.js' id='wpbdp-recaptcha-js'></script>
+<script    src='https://www.google.com/recaptcha/api.js?onload=wpbdp_recaptcha_callback&#038;render=6LcM0sgUAAAAAL6k5j1e6zsMn_gv5_8yL_Hpl2Lu' id='google-recaptcha-js'></script>
+<script  id='favorites-js-extra'>
+/* <![CDATA[ */
+var favorites_data = {"ajaxurl":"https:\/\/blockgeeks.com\/no-admin-ajax\/","nonce":"3dfdd98087","favorite":"Favorite <i class=\"sf-icon-star-empty\"><\/i>","favorited":"Favorited <i class=\"sf-icon-star-full\"><\/i>","includecount":"","indicate_loading":"","loading_text":"Loading","loading_image":"","loading_image_active":"","loading_image_preload":"","cache_enabled":"1","button_options":{"button_type":"custom","custom_colors":false,"box_shadow":false,"include_count":false,"default":{"background_default":false,"border_default":false,"text_default":false,"icon_default":false,"count_default":false},"active":{"background_active":false,"border_active":false,"text_active":false,"icon_active":false,"count_active":false}},"authentication_modal_content":"<p>Please login to add favorites.<\/p>\n<p><a href=\"#\" data-favorites-modal-close>Dismiss this notice<\/a><\/p>\n","authentication_redirect":"","dev_mode":"","logged_in":"","user_id":"0","authentication_redirect_url":"https:\/\/blockgeeks.com\/login\/"};
+/* ]]> */
+</script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/plugins/favorites/assets/js/favorites.min.js' id='favorites-js'></script>
+<script  id='advadsTrackingScript-js-extra'>
+/* <![CDATA[ */
+var advadsTracking = {"impressionActionName":"aatrack-records","clickActionName":"aatrack-click","targetClass":"block-target","blogId":"1"};
+/* ]]> */
+</script>
+<script    src='https://blockgeeks.com/wp-content/plugins/advanced-ads-tracking/public/assets/js/dist/tracking.min.js' id='advadsTrackingScript-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/wpdiscuz-widgets/assets/js/script.min.js' id='wpdiscuz_widgets_comm_vot_script-js'></script>
+<script    src='https://cdn.onesignal.com/sdks/OneSignalSDK.js?' async='async' id='remote_sdk-js'></script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/plugins/BGAMA/public/js/app.js' id='BGAMA-js'></script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/plugins/BGWeeklyStats/public/js/app.js' id='BGWeeklyStats-js'></script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/themes/blockgeeks/dist/main.js?a0e8e9c15041a936efdcc19da233c24ee62f3a04' id='bundle-js'></script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/plugins/easy-table-of-contents/vendor/js-cookie/js.cookie.min.js' id='js-cookie-js'></script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/plugins/BGAmplitude/public/js/app.js' id='jquery-selectize-js'></script>
+<script    defer="defer" src='https://blockgeeks.com/wp-content/plugins/BGNotifier/public/js/app.js' id='bg-notifier-js-js'></script>
+<script    src='https://blockgeeks.com/wp-content/plugins/BgWhatsNew/public/js/app.js' id='bg-gift-js-js'></script>
+<script > var swp_nonce = "1f333466e1";function parentIsEvil() { var html = null; try { var doc = top.location.pathname; } catch(err){ }; if(typeof doc === "undefined") { return true } else { return false }; }; if (parentIsEvil()) { top.location = self.location.href; };var url = "https://blockgeeks.com/community-partners/opensea/";if(url.indexOf("stfi.re") != -1) { var canonical = ""; var links = document.getElementsByTagName("link"); for (var i = 0; i < links.length; i ++) { if (links[i].getAttribute("rel") === "canonical") { canonical = links[i].getAttribute("href")}}; canonical = canonical.replace("?sfr=1", "");top.location = canonical; console.log(canonical);};var swpFloatBeforeContent = false; var swp_ajax_url = "https://blockgeeks.com/no-admin-ajax/"; var swp_post_id = "155446";var swpClickTracking = false; swpPinIt={"enabled":false};</script><!--noptimize--><script>!function(){window.advanced_ads_ready_queue=window.advanced_ads_ready_queue||[],advanced_ads_ready_queue.push=window.advanced_ads_ready;for(var d=0,a=advanced_ads_ready_queue.length;d<a;d++)advanced_ads_ready(advanced_ads_ready_queue[d])}();</script><!--/noptimize--><style >.wpbdp-listing-excerpt.wpbdp-listing-plan-id-1{background-color: #deedfc;}
+</style><script>var advads_tracking_ads = {};var advads_tracking_urls = {};var advads_tracking_methods = {};var advads_tracking_parallel = {};var advads_tracking_linkbases = {};</script><a href="javascript:void(0);" class="back-to-top-button">
+    <i class="arrow_blue arrow_top"></i>
+</a><svg style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <symbol id="icon-behance" viewBox="0 0 37 32">
+            <path class="path1" d="M33 6.054h-9.125v2.214h9.125v-2.214zM28.5 13.661q-1.607 0-2.607 0.938t-1.107 2.545h7.286q-0.321-3.482-3.571-3.482zM28.786 24.107q1.125 0 2.179-0.571t1.357-1.554h3.946q-1.786 5.482-7.625 5.482-3.821 0-6.080-2.357t-2.259-6.196q0-3.714 2.33-6.17t6.009-2.455q2.464 0 4.295 1.214t2.732 3.196 0.902 4.429q0 0.304-0.036 0.839h-11.75q0 1.982 1.027 3.063t2.973 1.080zM4.946 23.214h5.286q3.661 0 3.661-2.982 0-3.214-3.554-3.214h-5.393v6.196zM4.946 13.625h5.018q1.393 0 2.205-0.652t0.813-2.027q0-2.571-3.393-2.571h-4.643v5.25zM0 4.536h10.607q1.554 0 2.768 0.25t2.259 0.848 1.607 1.723 0.563 2.75q0 3.232-3.071 4.696 2.036 0.571 3.071 2.054t1.036 3.643q0 1.339-0.438 2.438t-1.179 1.848-1.759 1.268-2.161 0.75-2.393 0.232h-10.911v-22.5z"></path>
+        </symbol>
+        <symbol id="icon-deviantart" viewBox="0 0 18 32">
+            <path class="path1" d="M18.286 5.411l-5.411 10.393 0.429 0.554h4.982v7.411h-9.054l-0.786 0.536-2.536 4.875-0.536 0.536h-5.375v-5.411l5.411-10.411-0.429-0.536h-4.982v-7.411h9.054l0.786-0.536 2.536-4.875 0.536-0.536h5.375v5.411z"></path>
+        </symbol>
+        <symbol id="icon-medium" viewBox="0 0 32 32">
+            <path class="path1" d="M10.661 7.518v20.946q0 0.446-0.223 0.759t-0.652 0.313q-0.304 0-0.589-0.143l-8.304-4.161q-0.375-0.179-0.634-0.598t-0.259-0.83v-20.357q0-0.357 0.179-0.607t0.518-0.25q0.25 0 0.786 0.268l9.125 4.571q0.054 0.054 0.054 0.089zM11.804 9.321l9.536 15.464-9.536-4.75v-10.714zM32 9.643v18.821q0 0.446-0.25 0.723t-0.679 0.277-0.839-0.232l-7.875-3.929zM31.946 7.5q0 0.054-4.58 7.491t-5.366 8.705l-6.964-11.321 5.786-9.411q0.304-0.5 0.929-0.5 0.25 0 0.464 0.107l9.661 4.821q0.071 0.036 0.071 0.107z"></path>
+        </symbol>
+        <symbol id="icon-slideshare" viewBox="0 0 32 32">
+            <path class="path1" d="M15.589 13.214q0 1.482-1.134 2.545t-2.723 1.063-2.723-1.063-1.134-2.545q0-1.5 1.134-2.554t2.723-1.054 2.723 1.054 1.134 2.554zM24.554 13.214q0 1.482-1.125 2.545t-2.732 1.063q-1.589 0-2.723-1.063t-1.134-2.545q0-1.5 1.134-2.554t2.723-1.054q1.607 0 2.732 1.054t1.125 2.554zM28.571 16.429v-11.911q0-1.554-0.571-2.205t-1.982-0.652h-19.857q-1.482 0-2.009 0.607t-0.527 2.25v12.018q0.768 0.411 1.58 0.714t1.446 0.5 1.446 0.33 1.268 0.196 1.25 0.071 1.045 0.009 1.009-0.036 0.795-0.036q1.214-0.018 1.696 0.482 0.107 0.107 0.179 0.161 0.464 0.446 1.089 0.911 0.125-1.625 2.107-1.554 0.089 0 0.652 0.027t0.768 0.036 0.813 0.018 0.946-0.018 0.973-0.080 1.089-0.152 1.107-0.241 1.196-0.348 1.205-0.482 1.286-0.616zM31.482 16.339q-2.161 2.661-6.643 4.5 1.5 5.089-0.411 8.304-1.179 2.018-3.268 2.643-1.857 0.571-3.25-0.268-1.536-0.911-1.464-2.929l-0.018-5.821v-0.018q-0.143-0.036-0.438-0.107t-0.42-0.089l-0.018 6.036q0.071 2.036-1.482 2.929-1.411 0.839-3.268 0.268-2.089-0.643-3.25-2.679-1.875-3.214-0.393-8.268-4.482-1.839-6.643-4.5-0.446-0.661-0.071-1.125t1.071 0.018q0.054 0.036 0.196 0.125t0.196 0.143v-12.393q0-1.286 0.839-2.196t2.036-0.911h22.446q1.196 0 2.036 0.911t0.839 2.196v12.393l0.375-0.268q0.696-0.482 1.071-0.018t-0.071 1.125z"></path>
+        </symbol>
+        <symbol id="icon-snapchat-ghost" viewBox="0 0 30 32">
+            <path class="path1" d="M15.143 2.286q2.393-0.018 4.295 1.223t2.92 3.438q0.482 1.036 0.482 3.196 0 0.839-0.161 3.411 0.25 0.125 0.5 0.125 0.321 0 0.911-0.241t0.911-0.241q0.518 0 1 0.321t0.482 0.821q0 0.571-0.563 0.964t-1.232 0.563-1.232 0.518-0.563 0.848q0 0.268 0.214 0.768 0.661 1.464 1.83 2.679t2.58 1.804q0.5 0.214 1.429 0.411 0.5 0.107 0.5 0.625 0 1.25-3.911 1.839-0.125 0.196-0.196 0.696t-0.25 0.83-0.589 0.33q-0.357 0-1.107-0.116t-1.143-0.116q-0.661 0-1.107 0.089-0.571 0.089-1.125 0.402t-1.036 0.679-1.036 0.723-1.357 0.598-1.768 0.241q-0.929 0-1.723-0.241t-1.339-0.598-1.027-0.723-1.036-0.679-1.107-0.402q-0.464-0.089-1.125-0.089-0.429 0-1.17 0.134t-1.045 0.134q-0.446 0-0.625-0.33t-0.25-0.848-0.196-0.714q-3.911-0.589-3.911-1.839 0-0.518 0.5-0.625 0.929-0.196 1.429-0.411 1.393-0.571 2.58-1.804t1.83-2.679q0.214-0.5 0.214-0.768 0-0.5-0.563-0.848t-1.241-0.527-1.241-0.563-0.563-0.938q0-0.482 0.464-0.813t0.982-0.33q0.268 0 0.857 0.232t0.946 0.232q0.321 0 0.571-0.125-0.161-2.536-0.161-3.393 0-2.179 0.482-3.214 1.143-2.446 3.071-3.536t4.714-1.125z"></path>
+        </symbol>
+        <symbol id="icon-yelp" viewBox="0 0 27 32">
+            <path class="path1" d="M13.804 23.554v2.268q-0.018 5.214-0.107 5.446-0.214 0.571-0.911 0.714-0.964 0.161-3.241-0.679t-2.902-1.589q-0.232-0.268-0.304-0.643-0.018-0.214 0.071-0.464 0.071-0.179 0.607-0.839t3.232-3.857q0.018 0 1.071-1.25 0.268-0.339 0.705-0.438t0.884 0.063q0.429 0.179 0.67 0.518t0.223 0.75zM11.143 19.071q-0.054 0.982-0.929 1.25l-2.143 0.696q-4.911 1.571-5.214 1.571-0.625-0.036-0.964-0.643-0.214-0.446-0.304-1.339-0.143-1.357 0.018-2.973t0.536-2.223 1-0.571q0.232 0 3.607 1.375 1.25 0.518 2.054 0.839l1.5 0.607q0.411 0.161 0.634 0.545t0.205 0.866zM25.893 24.375q-0.125 0.964-1.634 2.875t-2.42 2.268q-0.661 0.25-1.125-0.125-0.25-0.179-3.286-5.125l-0.839-1.375q-0.25-0.375-0.205-0.821t0.348-0.821q0.625-0.768 1.482-0.464 0.018 0.018 2.125 0.714 3.625 1.179 4.321 1.42t0.839 0.366q0.5 0.393 0.393 1.089zM13.893 13.089q0.089 1.821-0.964 2.179-1.036 0.304-2.036-1.268l-6.75-10.679q-0.143-0.625 0.339-1.107 0.732-0.768 3.705-1.598t4.009-0.563q0.714 0.179 0.875 0.804 0.054 0.321 0.393 5.455t0.429 6.777zM25.714 15.018q0.054 0.696-0.464 1.054-0.268 0.179-5.875 1.536-1.196 0.268-1.625 0.411l0.018-0.036q-0.411 0.107-0.821-0.071t-0.661-0.571q-0.536-0.839 0-1.554 0.018-0.018 1.339-1.821 2.232-3.054 2.679-3.643t0.607-0.696q0.5-0.339 1.161-0.036 0.857 0.411 2.196 2.384t1.446 2.991v0.054z"></path>
+        </symbol>
+        <symbol id="icon-vine" viewBox="0 0 27 32">
+            <path class="path1" d="M26.732 14.768v3.536q-1.804 0.411-3.536 0.411-1.161 2.429-2.955 4.839t-3.241 3.848-2.286 1.902q-1.429 0.804-2.893-0.054-0.5-0.304-1.080-0.777t-1.518-1.491-1.83-2.295-1.92-3.286-1.884-4.357-1.634-5.616-1.259-6.964h5.054q0.464 3.893 1.25 7.116t1.866 5.661 2.17 4.205 2.5 3.482q3.018-3.018 5.125-7.25-2.536-1.286-3.982-3.929t-1.446-5.946q0-3.429 1.857-5.616t5.071-2.188q3.179 0 4.875 1.884t1.696 5.313q0 2.839-1.036 5.107-0.125 0.018-0.348 0.054t-0.821 0.036-1.125-0.107-1.107-0.455-0.902-0.92q0.554-1.839 0.554-3.286 0-1.554-0.518-2.357t-1.411-0.804q-0.946 0-1.518 0.884t-0.571 2.509q0 3.321 1.875 5.241t4.768 1.92q1.107 0 2.161-0.25z"></path>
+        </symbol>
+        <symbol id="icon-vk" viewBox="0 0 35 32">
+            <path class="path1" d="M34.232 9.286q0.411 1.143-2.679 5.25-0.429 0.571-1.161 1.518-1.393 1.786-1.607 2.339-0.304 0.732 0.25 1.446 0.304 0.375 1.446 1.464h0.018l0.071 0.071q2.518 2.339 3.411 3.946 0.054 0.089 0.116 0.223t0.125 0.473-0.009 0.607-0.446 0.491-1.054 0.223l-4.571 0.071q-0.429 0.089-1-0.089t-0.929-0.393l-0.357-0.214q-0.536-0.375-1.25-1.143t-1.223-1.384-1.089-1.036-1.009-0.277q-0.054 0.018-0.143 0.063t-0.304 0.259-0.384 0.527-0.304 0.929-0.116 1.384q0 0.268-0.063 0.491t-0.134 0.33l-0.071 0.089q-0.321 0.339-0.946 0.393h-2.054q-1.268 0.071-2.607-0.295t-2.348-0.946-1.839-1.179-1.259-1.027l-0.446-0.429q-0.179-0.179-0.491-0.536t-1.277-1.625-1.893-2.696-2.188-3.768-2.33-4.857q-0.107-0.286-0.107-0.482t0.054-0.286l0.071-0.107q0.268-0.339 1.018-0.339l4.893-0.036q0.214 0.036 0.411 0.116t0.286 0.152l0.089 0.054q0.286 0.196 0.429 0.571 0.357 0.893 0.821 1.848t0.732 1.455l0.286 0.518q0.518 1.071 1 1.857t0.866 1.223 0.741 0.688 0.607 0.25 0.482-0.089q0.036-0.018 0.089-0.089t0.214-0.393 0.241-0.839 0.17-1.446 0-2.232q-0.036-0.714-0.161-1.304t-0.25-0.821l-0.107-0.214q-0.446-0.607-1.518-0.768-0.232-0.036 0.089-0.429 0.304-0.339 0.679-0.536 0.946-0.464 4.268-0.429 1.464 0.018 2.411 0.232 0.357 0.089 0.598 0.241t0.366 0.429 0.188 0.571 0.063 0.813-0.018 0.982-0.045 1.259-0.027 1.473q0 0.196-0.018 0.75t-0.009 0.857 0.063 0.723 0.205 0.696 0.402 0.438q0.143 0.036 0.304 0.071t0.464-0.196 0.679-0.616 0.929-1.196 1.214-1.92q1.071-1.857 1.911-4.018 0.071-0.179 0.179-0.313t0.196-0.188l0.071-0.054 0.089-0.045t0.232-0.054 0.357-0.009l5.143-0.036q0.696-0.089 1.143 0.045t0.554 0.295z"></path>
+        </symbol>
+        <symbol id="icon-search" viewBox="0 0 30 32">
+            <path class="path1" d="M20.571 14.857q0-3.304-2.348-5.652t-5.652-2.348-5.652 2.348-2.348 5.652 2.348 5.652 5.652 2.348 5.652-2.348 2.348-5.652zM29.714 29.714q0 0.929-0.679 1.607t-1.607 0.679q-0.964 0-1.607-0.679l-6.125-6.107q-3.196 2.214-7.125 2.214-2.554 0-4.884-0.991t-4.018-2.679-2.679-4.018-0.991-4.884 0.991-4.884 2.679-4.018 4.018-2.679 4.884-0.991 4.884 0.991 4.018 2.679 2.679 4.018 0.991 4.884q0 3.929-2.214 7.125l6.125 6.125q0.661 0.661 0.661 1.607z"></path>
+        </symbol>
+        <symbol id="icon-envelope-o" viewBox="0 0 32 32">
+            <path class="path1" d="M29.714 26.857v-13.714q-0.571 0.643-1.232 1.179-4.786 3.679-7.607 6.036-0.911 0.768-1.482 1.196t-1.545 0.866-1.83 0.438h-0.036q-0.857 0-1.83-0.438t-1.545-0.866-1.482-1.196q-2.821-2.357-7.607-6.036-0.661-0.536-1.232-1.179v13.714q0 0.232 0.17 0.402t0.402 0.17h26.286q0.232 0 0.402-0.17t0.17-0.402zM29.714 8.089v-0.438t-0.009-0.232-0.054-0.223-0.098-0.161-0.161-0.134-0.25-0.045h-26.286q-0.232 0-0.402 0.17t-0.17 0.402q0 3 2.625 5.071 3.446 2.714 7.161 5.661 0.107 0.089 0.625 0.527t0.821 0.67 0.795 0.563 0.902 0.491 0.768 0.161h0.036q0.357 0 0.768-0.161t0.902-0.491 0.795-0.563 0.821-0.67 0.625-0.527q3.714-2.946 7.161-5.661 0.964-0.768 1.795-2.063t0.83-2.348zM32 7.429v19.429q0 1.179-0.839 2.018t-2.018 0.839h-26.286q-1.179 0-2.018-0.839t-0.839-2.018v-19.429q0-1.179 0.839-2.018t2.018-0.839h26.286q1.179 0 2.018 0.839t0.839 2.018z"></path>
+        </symbol>
+        <symbol id="icon-close" viewBox="0 0 25 32">
+            <path class="path1" d="M23.179 23.607q0 0.714-0.5 1.214l-2.429 2.429q-0.5 0.5-1.214 0.5t-1.214-0.5l-5.25-5.25-5.25 5.25q-0.5 0.5-1.214 0.5t-1.214-0.5l-2.429-2.429q-0.5-0.5-0.5-1.214t0.5-1.214l5.25-5.25-5.25-5.25q-0.5-0.5-0.5-1.214t0.5-1.214l2.429-2.429q0.5-0.5 1.214-0.5t1.214 0.5l5.25 5.25 5.25-5.25q0.5-0.5 1.214-0.5t1.214 0.5l2.429 2.429q0.5 0.5 0.5 1.214t-0.5 1.214l-5.25 5.25 5.25 5.25q0.5 0.5 0.5 1.214z"></path>
+        </symbol>
+        <symbol id="icon-angle-down" viewBox="0 0 21 32">
+            <path class="path1" d="M19.196 13.143q0 0.232-0.179 0.411l-8.321 8.321q-0.179 0.179-0.411 0.179t-0.411-0.179l-8.321-8.321q-0.179-0.179-0.179-0.411t0.179-0.411l0.893-0.893q0.179-0.179 0.411-0.179t0.411 0.179l7.018 7.018 7.018-7.018q0.179-0.179 0.411-0.179t0.411 0.179l0.893 0.893q0.179 0.179 0.179 0.411z"></path>
+        </symbol>
+        <symbol id="icon-folder-open" viewBox="0 0 34 32">
+            <path class="path1" d="M33.554 17q0 0.554-0.554 1.179l-6 7.071q-0.768 0.911-2.152 1.545t-2.563 0.634h-19.429q-0.607 0-1.080-0.232t-0.473-0.768q0-0.554 0.554-1.179l6-7.071q0.768-0.911 2.152-1.545t2.563-0.634h19.429q0.607 0 1.080 0.232t0.473 0.768zM27.429 10.857v2.857h-14.857q-1.679 0-3.518 0.848t-2.929 2.134l-6.107 7.179q0-0.071-0.009-0.223t-0.009-0.223v-17.143q0-1.643 1.179-2.821t2.821-1.179h5.714q1.643 0 2.821 1.179t1.179 2.821v0.571h9.714q1.643 0 2.821 1.179t1.179 2.821z"></path>
+        </symbol>
+        <symbol id="icon-twitter" viewBox="0 0 30 32">
+            <path class="path1" d="M28.929 7.286q-1.196 1.75-2.893 2.982 0.018 0.25 0.018 0.75 0 2.321-0.679 4.634t-2.063 4.437-3.295 3.759-4.607 2.607-5.768 0.973q-4.839 0-8.857-2.589 0.625 0.071 1.393 0.071 4.018 0 7.161-2.464-1.875-0.036-3.357-1.152t-2.036-2.848q0.589 0.089 1.089 0.089 0.768 0 1.518-0.196-2-0.411-3.313-1.991t-1.313-3.67v-0.071q1.214 0.679 2.607 0.732-1.179-0.786-1.875-2.054t-0.696-2.75q0-1.571 0.786-2.911 2.161 2.661 5.259 4.259t6.634 1.777q-0.143-0.679-0.143-1.321 0-2.393 1.688-4.080t4.080-1.688q2.5 0 4.214 1.821 1.946-0.375 3.661-1.393-0.661 2.054-2.536 3.179 1.661-0.179 3.321-0.893z"></path>
+        </symbol>
+        <symbol id="icon-facebook" viewBox="0 0 19 32">
+            <path class="path1" d="M17.125 0.214v4.714h-2.804q-1.536 0-2.071 0.643t-0.536 1.929v3.375h5.232l-0.696 5.286h-4.536v13.554h-5.464v-13.554h-4.554v-5.286h4.554v-3.893q0-3.321 1.857-5.152t4.946-1.83q2.625 0 4.071 0.214z"></path>
+        </symbol>
+        <symbol id="icon-github" viewBox="0 0 27 32">
+            <path class="path1" d="M13.714 2.286q3.732 0 6.884 1.839t4.991 4.991 1.839 6.884q0 4.482-2.616 8.063t-6.759 4.955q-0.482 0.089-0.714-0.125t-0.232-0.536q0-0.054 0.009-1.366t0.009-2.402q0-1.732-0.929-2.536 1.018-0.107 1.83-0.321t1.679-0.696 1.446-1.188 0.946-1.875 0.366-2.688q0-2.125-1.411-3.679 0.661-1.625-0.143-3.643-0.5-0.161-1.446 0.196t-1.643 0.786l-0.679 0.429q-1.661-0.464-3.429-0.464t-3.429 0.464q-0.286-0.196-0.759-0.482t-1.491-0.688-1.518-0.241q-0.804 2.018-0.143 3.643-1.411 1.554-1.411 3.679 0 1.518 0.366 2.679t0.938 1.875 1.438 1.196 1.679 0.696 1.83 0.321q-0.696 0.643-0.875 1.839-0.375 0.179-0.804 0.268t-1.018 0.089-1.17-0.384-0.991-1.116q-0.339-0.571-0.866-0.929t-0.884-0.429l-0.357-0.054q-0.375 0-0.518 0.080t-0.089 0.205 0.161 0.25 0.232 0.214l0.125 0.089q0.393 0.179 0.777 0.679t0.563 0.911l0.179 0.411q0.232 0.679 0.786 1.098t1.196 0.536 1.241 0.125 0.991-0.063l0.411-0.071q0 0.679 0.009 1.58t0.009 0.973q0 0.321-0.232 0.536t-0.714 0.125q-4.143-1.375-6.759-4.955t-2.616-8.063q0-3.732 1.839-6.884t4.991-4.991 6.884-1.839zM5.196 21.982q0.054-0.125-0.125-0.214-0.179-0.054-0.232 0.036-0.054 0.125 0.125 0.214 0.161 0.107 0.232-0.036zM5.75 22.589q0.125-0.089-0.036-0.286-0.179-0.161-0.286-0.054-0.125 0.089 0.036 0.286 0.179 0.179 0.286 0.054zM6.286 23.393q0.161-0.125 0-0.339-0.143-0.232-0.304-0.107-0.161 0.089 0 0.321t0.304 0.125zM7.036 24.143q0.143-0.143-0.071-0.339-0.214-0.214-0.357-0.054-0.161 0.143 0.071 0.339 0.214 0.214 0.357 0.054zM8.054 24.589q0.054-0.196-0.232-0.286-0.268-0.071-0.339 0.125t0.232 0.268q0.268 0.107 0.339-0.107zM9.179 24.679q0-0.232-0.304-0.196-0.286 0-0.286 0.196 0 0.232 0.304 0.196 0.286 0 0.286-0.196zM10.214 24.5q-0.036-0.196-0.321-0.161-0.286 0.054-0.25 0.268t0.321 0.143 0.25-0.25z"></path>
+        </symbol>
+        <symbol id="icon-bars" viewBox="0 0 27 32">
+            <path class="path1" d="M27.429 24v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 14.857v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 5.714v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804z"></path>
+        </symbol>
+        <symbol id="icon-google-plus" viewBox="0 0 41 32">
+            <path class="path1" d="M25.661 16.304q0 3.714-1.554 6.616t-4.429 4.536-6.589 1.634q-2.661 0-5.089-1.036t-4.179-2.786-2.786-4.179-1.036-5.089 1.036-5.089 2.786-4.179 4.179-2.786 5.089-1.036q5.107 0 8.768 3.429l-3.554 3.411q-2.089-2.018-5.214-2.018-2.196 0-4.063 1.107t-2.955 3.009-1.089 4.152 1.089 4.152 2.955 3.009 4.063 1.107q1.482 0 2.723-0.411t2.045-1.027 1.402-1.402 0.875-1.482 0.384-1.321h-7.429v-4.5h12.357q0.214 1.125 0.214 2.179zM41.143 14.125v3.75h-3.732v3.732h-3.75v-3.732h-3.732v-3.75h3.732v-3.732h3.75v3.732h3.732z"></path>
+        </symbol>
+        <symbol id="icon-linkedin" viewBox="0 0 27 32">
+            <path class="path1" d="M6.232 11.161v17.696h-5.893v-17.696h5.893zM6.607 5.696q0.018 1.304-0.902 2.179t-2.42 0.875h-0.036q-1.464 0-2.357-0.875t-0.893-2.179q0-1.321 0.92-2.188t2.402-0.866 2.375 0.866 0.911 2.188zM27.429 18.714v10.143h-5.875v-9.464q0-1.875-0.723-2.938t-2.259-1.063q-1.125 0-1.884 0.616t-1.134 1.527q-0.196 0.536-0.196 1.446v9.875h-5.875q0.036-7.125 0.036-11.554t-0.018-5.286l-0.018-0.857h5.875v2.571h-0.036q0.357-0.571 0.732-1t1.009-0.929 1.554-0.777 2.045-0.277q3.054 0 4.911 2.027t1.857 5.938z"></path>
+        </symbol>
+        <symbol id="icon-quote-right" viewBox="0 0 30 32">
+            <path class="path1" d="M13.714 5.714v12.571q0 1.857-0.723 3.545t-1.955 2.92-2.92 1.955-3.545 0.723h-1.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h1.143q1.893 0 3.232-1.339t1.339-3.232v-0.571q0-0.714-0.5-1.214t-1.214-0.5h-4q-1.429 0-2.429-1t-1-2.429v-6.857q0-1.429 1-2.429t2.429-1h6.857q1.429 0 2.429 1t1 2.429zM29.714 5.714v12.571q0 1.857-0.723 3.545t-1.955 2.92-2.92 1.955-3.545 0.723h-1.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h1.143q1.893 0 3.232-1.339t1.339-3.232v-0.571q0-0.714-0.5-1.214t-1.214-0.5h-4q-1.429 0-2.429-1t-1-2.429v-6.857q0-1.429 1-2.429t2.429-1h6.857q1.429 0 2.429 1t1 2.429z"></path>
+        </symbol>
+        <symbol id="icon-mail-reply" viewBox="0 0 32 32">
+            <path class="path1" d="M32 20q0 2.964-2.268 8.054-0.054 0.125-0.188 0.429t-0.241 0.536-0.232 0.393q-0.214 0.304-0.5 0.304-0.268 0-0.42-0.179t-0.152-0.446q0-0.161 0.045-0.473t0.045-0.42q0.089-1.214 0.089-2.196 0-1.804-0.313-3.232t-0.866-2.473-1.429-1.804-1.884-1.241-2.375-0.759-2.75-0.384-3.134-0.107h-4v4.571q0 0.464-0.339 0.804t-0.804 0.339-0.804-0.339l-9.143-9.143q-0.339-0.339-0.339-0.804t0.339-0.804l9.143-9.143q0.339-0.339 0.804-0.339t0.804 0.339 0.339 0.804v4.571h4q12.732 0 15.625 7.196 0.946 2.393 0.946 5.946z"></path>
+        </symbol>
+        <symbol id="icon-youtube" viewBox="0 0 27 32">
+            <path class="path1" d="M17.339 22.214v3.768q0 1.196-0.696 1.196-0.411 0-0.804-0.393v-5.375q0.393-0.393 0.804-0.393 0.696 0 0.696 1.196zM23.375 22.232v0.821h-1.607v-0.821q0-1.214 0.804-1.214t0.804 1.214zM6.125 18.339h1.911v-1.679h-5.571v1.679h1.875v10.161h1.786v-10.161zM11.268 28.5h1.589v-8.821h-1.589v6.75q-0.536 0.75-1.018 0.75-0.321 0-0.375-0.375-0.018-0.054-0.018-0.625v-6.5h-1.589v6.982q0 0.875 0.143 1.304 0.214 0.661 1.036 0.661 0.857 0 1.821-1.089v0.964zM18.929 25.857v-3.518q0-1.304-0.161-1.768-0.304-1-1.268-1-0.893 0-1.661 0.964v-3.875h-1.589v11.839h1.589v-0.857q0.804 0.982 1.661 0.982 0.964 0 1.268-0.982 0.161-0.482 0.161-1.786zM24.964 25.679v-0.232h-1.625q0 0.911-0.036 1.089-0.125 0.643-0.714 0.643-0.821 0-0.821-1.232v-1.554h3.196v-1.839q0-1.411-0.482-2.071-0.696-0.911-1.893-0.911-1.214 0-1.911 0.911-0.5 0.661-0.5 2.071v3.089q0 1.411 0.518 2.071 0.696 0.911 1.929 0.911 1.286 0 1.929-0.946 0.321-0.482 0.375-0.964 0.036-0.161 0.036-1.036zM14.107 9.375v-3.75q0-1.232-0.768-1.232t-0.768 1.232v3.75q0 1.25 0.768 1.25t0.768-1.25zM26.946 22.786q0 4.179-0.464 6.25-0.25 1.054-1.036 1.768t-1.821 0.821q-3.286 0.375-9.911 0.375t-9.911-0.375q-1.036-0.107-1.83-0.821t-1.027-1.768q-0.464-2-0.464-6.25 0-4.179 0.464-6.25 0.25-1.054 1.036-1.768t1.839-0.839q3.268-0.357 9.893-0.357t9.911 0.357q1.036 0.125 1.83 0.839t1.027 1.768q0.464 2 0.464 6.25zM9.125 0h1.821l-2.161 7.125v4.839h-1.786v-4.839q-0.25-1.321-1.089-3.786-0.661-1.839-1.161-3.339h1.893l1.268 4.696zM15.732 5.946v3.125q0 1.446-0.5 2.107-0.661 0.911-1.893 0.911-1.196 0-1.875-0.911-0.5-0.679-0.5-2.107v-3.125q0-1.429 0.5-2.089 0.679-0.911 1.875-0.911 1.232 0 1.893 0.911 0.5 0.661 0.5 2.089zM21.714 3.054v8.911h-1.625v-0.982q-0.946 1.107-1.839 1.107-0.821 0-1.054-0.661-0.143-0.429-0.143-1.339v-7.036h1.625v6.554q0 0.589 0.018 0.625 0.054 0.393 0.375 0.393 0.482 0 1.018-0.768v-6.804h1.625z"></path>
+        </symbol>
+        <symbol id="icon-dropbox" viewBox="0 0 32 32">
+            <path class="path1" d="M7.179 12.625l8.821 5.446-6.107 5.089-8.75-5.696zM24.786 22.536v1.929l-8.75 5.232v0.018l-0.018-0.018-0.018 0.018v-0.018l-8.732-5.232v-1.929l2.625 1.714 6.107-5.071v-0.036l0.018 0.018 0.018-0.018v0.036l6.125 5.071zM9.893 2.107l6.107 5.089-8.821 5.429-6.036-4.821zM24.821 12.625l6.036 4.839-8.732 5.696-6.125-5.089zM22.125 2.107l8.732 5.696-6.036 4.821-8.821-5.429z"></path>
+        </symbol>
+        <symbol id="icon-instagram" viewBox="0 0 27 32">
+            <path class="path1" d="M18.286 16q0-1.893-1.339-3.232t-3.232-1.339-3.232 1.339-1.339 3.232 1.339 3.232 3.232 1.339 3.232-1.339 1.339-3.232zM20.75 16q0 2.929-2.054 4.982t-4.982 2.054-4.982-2.054-2.054-4.982 2.054-4.982 4.982-2.054 4.982 2.054 2.054 4.982zM22.679 8.679q0 0.679-0.482 1.161t-1.161 0.482-1.161-0.482-0.482-1.161 0.482-1.161 1.161-0.482 1.161 0.482 0.482 1.161zM13.714 4.75q-0.125 0-1.366-0.009t-1.884 0-1.723 0.054-1.839 0.179-1.277 0.33q-0.893 0.357-1.571 1.036t-1.036 1.571q-0.196 0.518-0.33 1.277t-0.179 1.839-0.054 1.723 0 1.884 0.009 1.366-0.009 1.366 0 1.884 0.054 1.723 0.179 1.839 0.33 1.277q0.357 0.893 1.036 1.571t1.571 1.036q0.518 0.196 1.277 0.33t1.839 0.179 1.723 0.054 1.884 0 1.366-0.009 1.366 0.009 1.884 0 1.723-0.054 1.839-0.179 1.277-0.33q0.893-0.357 1.571-1.036t1.036-1.571q0.196-0.518 0.33-1.277t0.179-1.839 0.054-1.723 0-1.884-0.009-1.366 0.009-1.366 0-1.884-0.054-1.723-0.179-1.839-0.33-1.277q-0.357-0.893-1.036-1.571t-1.571-1.036q-0.518-0.196-1.277-0.33t-1.839-0.179-1.723-0.054-1.884 0-1.366 0.009zM27.429 16q0 4.089-0.089 5.661-0.179 3.714-2.214 5.75t-5.75 2.214q-1.571 0.089-5.661 0.089t-5.661-0.089q-3.714-0.179-5.75-2.214t-2.214-5.75q-0.089-1.571-0.089-5.661t0.089-5.661q0.179-3.714 2.214-5.75t5.75-2.214q1.571-0.089 5.661-0.089t5.661 0.089q3.714 0.179 5.75 2.214t2.214 5.75q0.089 1.571 0.089 5.661z"></path>
+        </symbol>
+        <symbol id="icon-flickr" viewBox="0 0 27 32">
+            <path class="path1" d="M22.286 2.286q2.125 0 3.634 1.509t1.509 3.634v17.143q0 2.125-1.509 3.634t-3.634 1.509h-17.143q-2.125 0-3.634-1.509t-1.509-3.634v-17.143q0-2.125 1.509-3.634t3.634-1.509h17.143zM12.464 16q0-1.571-1.107-2.679t-2.679-1.107-2.679 1.107-1.107 2.679 1.107 2.679 2.679 1.107 2.679-1.107 1.107-2.679zM22.536 16q0-1.571-1.107-2.679t-2.679-1.107-2.679 1.107-1.107 2.679 1.107 2.679 2.679 1.107 2.679-1.107 1.107-2.679z"></path>
+        </symbol>
+        <symbol id="icon-tumblr" viewBox="0 0 19 32">
+            <path class="path1" d="M16.857 23.732l1.429 4.232q-0.411 0.625-1.982 1.179t-3.161 0.571q-1.857 0.036-3.402-0.464t-2.545-1.321-1.696-1.893-0.991-2.143-0.295-2.107v-9.714h-3v-3.839q1.286-0.464 2.304-1.241t1.625-1.607 1.036-1.821 0.607-1.768 0.268-1.58q0.018-0.089 0.080-0.152t0.134-0.063h4.357v7.571h5.946v4.5h-5.964v9.25q0 0.536 0.116 1t0.402 0.938 0.884 0.741 1.455 0.25q1.393-0.036 2.393-0.518z"></path>
+        </symbol>
+        <symbol id="icon-dockerhub" viewBox="0 0 24 28">
+            <path class="path1" d="M1.597 10.257h2.911v2.83H1.597v-2.83zm3.573 0h2.91v2.83H5.17v-2.83zm0-3.627h2.91v2.829H5.17V6.63zm3.57 3.627h2.912v2.83H8.74v-2.83zm0-3.627h2.912v2.829H8.74V6.63zm3.573 3.627h2.911v2.83h-2.911v-2.83zm0-3.627h2.911v2.829h-2.911V6.63zm3.572 3.627h2.911v2.83h-2.911v-2.83zM12.313 3h2.911v2.83h-2.911V3zm-6.65 14.173c-.449 0-.812.354-.812.788 0 .435.364.788.812.788.447 0 .811-.353.811-.788 0-.434-.363-.788-.811-.788"></path>
+            <path class="path2" d="M28.172 11.721c-.978-.549-2.278-.624-3.388-.306-.136-1.146-.91-2.149-1.83-2.869l-.366-.286-.307.345c-.618.692-.8 1.845-.718 2.73.063.651.273 1.312.685 1.834-.313.183-.668.328-.985.434-.646.212-1.347.33-2.028.33H.083l-.042.429c-.137 1.432.065 2.866.674 4.173l.262.519.03.048c1.8 2.973 4.963 4.225 8.41 4.225 6.672 0 12.174-2.896 14.702-9.015 1.689.085 3.417-.4 4.243-1.968l.211-.4-.401-.223zM5.664 19.458c-.85 0-1.542-.671-1.542-1.497 0-.825.691-1.498 1.541-1.498.849 0 1.54.672 1.54 1.497s-.69 1.498-1.539 1.498z"></path>
+        </symbol>
+        <symbol id="icon-dribbble" viewBox="0 0 27 32">
+            <path class="path1" d="M18.286 26.786q-0.75-4.304-2.5-8.893h-0.036l-0.036 0.018q-0.286 0.107-0.768 0.295t-1.804 0.875-2.446 1.464-2.339 2.045-1.839 2.643l-0.268-0.196q3.286 2.679 7.464 2.679 2.357 0 4.571-0.929zM14.982 15.946q-0.375-0.875-0.946-1.982-5.554 1.661-12.018 1.661-0.018 0.125-0.018 0.375 0 2.214 0.786 4.223t2.214 3.598q0.893-1.589 2.205-2.973t2.545-2.223 2.33-1.446 1.777-0.857l0.661-0.232q0.071-0.018 0.232-0.063t0.232-0.080zM13.071 12.161q-2.143-3.804-4.357-6.75-2.464 1.161-4.179 3.321t-2.286 4.857q5.393 0 10.821-1.429zM25.286 17.857q-3.75-1.071-7.304-0.518 1.554 4.268 2.286 8.375 1.982-1.339 3.304-3.384t1.714-4.473zM10.911 4.625q-0.018 0-0.036 0.018 0.018-0.018 0.036-0.018zM21.446 7.214q-3.304-2.929-7.732-2.929-1.357 0-2.768 0.339 2.339 3.036 4.393 6.821 1.232-0.464 2.321-1.080t1.723-1.098 1.17-1.018 0.67-0.723zM25.429 15.875q-0.054-4.143-2.661-7.321l-0.018 0.018q-0.161 0.214-0.339 0.438t-0.777 0.795-1.268 1.080-1.786 1.161-2.348 1.152q0.446 0.946 0.786 1.696 0.036 0.107 0.116 0.313t0.134 0.295q0.643-0.089 1.33-0.125t1.313-0.036 1.232 0.027 1.143 0.071 1.009 0.098 0.857 0.116 0.652 0.107 0.446 0.080zM27.429 16q0 3.732-1.839 6.884t-4.991 4.991-6.884 1.839-6.884-1.839-4.991-4.991-1.839-6.884 1.839-6.884 4.991-4.991 6.884-1.839 6.884 1.839 4.991 4.991 1.839 6.884z"></path>
+        </symbol>
+        <symbol id="icon-skype" viewBox="0 0 27 32">
+            <path class="path1" d="M20.946 18.982q0-0.893-0.348-1.634t-0.866-1.223-1.304-0.875-1.473-0.607-1.563-0.411l-1.857-0.429q-0.536-0.125-0.786-0.188t-0.625-0.205-0.536-0.286-0.295-0.375-0.134-0.536q0-1.375 2.571-1.375 0.768 0 1.375 0.214t0.964 0.509 0.679 0.598 0.714 0.518 0.857 0.214q0.839 0 1.348-0.571t0.509-1.375q0-0.982-1-1.777t-2.536-1.205-3.25-0.411q-1.214 0-2.357 0.277t-2.134 0.839-1.589 1.554-0.598 2.295q0 1.089 0.339 1.902t1 1.348 1.429 0.866 1.839 0.58l2.607 0.643q1.607 0.393 2 0.643 0.571 0.357 0.571 1.071 0 0.696-0.714 1.152t-1.875 0.455q-0.911 0-1.634-0.286t-1.161-0.688-0.813-0.804-0.821-0.688-0.964-0.286q-0.893 0-1.348 0.536t-0.455 1.339q0 1.643 2.179 2.813t5.196 1.17q1.304 0 2.5-0.33t2.188-0.955 1.58-1.67 0.589-2.348zM27.429 22.857q0 2.839-2.009 4.848t-4.848 2.009q-2.321 0-4.179-1.429-1.375 0.286-2.679 0.286-2.554 0-4.884-0.991t-4.018-2.679-2.679-4.018-0.991-4.884q0-1.304 0.286-2.679-1.429-1.857-1.429-4.179 0-2.839 2.009-4.848t4.848-2.009q2.321 0 4.179 1.429 1.375-0.286 2.679-0.286 2.554 0 4.884 0.991t4.018 2.679 2.679 4.018 0.991 4.884q0 1.304-0.286 2.679 1.429 1.857 1.429 4.179z"></path>
+        </symbol>
+        <symbol id="icon-foursquare" viewBox="0 0 23 32">
+            <path class="path1" d="M17.857 7.75l0.661-3.464q0.089-0.411-0.161-0.714t-0.625-0.304h-12.714q-0.411 0-0.688 0.304t-0.277 0.661v19.661q0 0.125 0.107 0.018l5.196-6.286q0.411-0.464 0.679-0.598t0.857-0.134h4.268q0.393 0 0.661-0.259t0.321-0.527q0.429-2.321 0.661-3.411 0.071-0.375-0.205-0.714t-0.652-0.339h-5.25q-0.518 0-0.857-0.339t-0.339-0.857v-0.75q0-0.518 0.339-0.848t0.857-0.33h6.179q0.321 0 0.625-0.241t0.357-0.527zM21.911 3.786q-0.268 1.304-0.955 4.759t-1.241 6.25-0.625 3.098q-0.107 0.393-0.161 0.58t-0.25 0.58-0.438 0.589-0.688 0.375-1.036 0.179h-4.839q-0.232 0-0.393 0.179-0.143 0.161-7.607 8.821-0.393 0.446-1.045 0.509t-0.866-0.098q-0.982-0.393-0.982-1.75v-25.179q0-0.982 0.679-1.83t2.143-0.848h15.857q1.696 0 2.268 0.946t0.179 2.839zM21.911 3.786l-2.821 14.107q0.071-0.304 0.625-3.098t1.241-6.25 0.955-4.759z"></path>
+        </symbol>
+        <symbol id="icon-wordpress" viewBox="0 0 32 32">
+            <path class="path1" d="M2.268 16q0-2.911 1.196-5.589l6.554 17.946q-3.5-1.696-5.625-5.018t-2.125-7.339zM25.268 15.304q0 0.339-0.045 0.688t-0.179 0.884-0.205 0.786-0.313 1.054-0.313 1.036l-1.357 4.571-4.964-14.75q0.821-0.054 1.571-0.143 0.339-0.036 0.464-0.33t-0.045-0.554-0.509-0.241l-3.661 0.179q-1.339-0.018-3.607-0.179-0.214-0.018-0.366 0.089t-0.205 0.268-0.027 0.33 0.161 0.295 0.348 0.143l1.429 0.143 2.143 5.857-3 9-5-14.857q0.821-0.054 1.571-0.143 0.339-0.036 0.464-0.33t-0.045-0.554-0.509-0.241l-3.661 0.179q-0.125 0-0.411-0.009t-0.464-0.009q1.875-2.857 4.902-4.527t6.563-1.67q2.625 0 5.009 0.946t4.259 2.661h-0.179q-0.982 0-1.643 0.723t-0.661 1.705q0 0.214 0.036 0.429t0.071 0.384 0.143 0.411 0.161 0.375 0.214 0.402 0.223 0.375 0.259 0.429 0.25 0.411q1.125 1.911 1.125 3.786zM16.232 17.196l4.232 11.554q0.018 0.107 0.089 0.196-2.25 0.786-4.554 0.786-2 0-3.875-0.571zM28.036 9.411q1.696 3.107 1.696 6.589 0 3.732-1.857 6.884t-4.982 4.973l4.196-12.107q1.054-3.018 1.054-4.929 0-0.75-0.107-1.411zM16 0q3.25 0 6.214 1.268t5.107 3.411 3.411 5.107 1.268 6.214-1.268 6.214-3.411 5.107-5.107 3.411-6.214 1.268-6.214-1.268-5.107-3.411-3.411-5.107-1.268-6.214 1.268-6.214 3.411-5.107 5.107-3.411 6.214-1.268zM16 31.268q3.089 0 5.92-1.214t4.875-3.259 3.259-4.875 1.214-5.92-1.214-5.92-3.259-4.875-4.875-3.259-5.92-1.214-5.92 1.214-4.875 3.259-3.259 4.875-1.214 5.92 1.214 5.92 3.259 4.875 4.875 3.259 5.92 1.214z"></path>
+        </symbol>
+        <symbol id="icon-stumbleupon" viewBox="0 0 34 32">
+            <path class="path1" d="M18.964 12.714v-2.107q0-0.75-0.536-1.286t-1.286-0.536-1.286 0.536-0.536 1.286v10.929q0 3.125-2.25 5.339t-5.411 2.214q-3.179 0-5.42-2.241t-2.241-5.42v-4.75h5.857v4.679q0 0.768 0.536 1.295t1.286 0.527 1.286-0.527 0.536-1.295v-11.071q0-3.054 2.259-5.214t5.384-2.161q3.143 0 5.393 2.179t2.25 5.25v2.429l-3.482 1.036zM28.429 16.679h5.857v4.75q0 3.179-2.241 5.42t-5.42 2.241q-3.161 0-5.411-2.223t-2.25-5.366v-4.786l2.339 1.089 3.482-1.036v4.821q0 0.75 0.536 1.277t1.286 0.527 1.286-0.527 0.536-1.277v-4.911z"></path>
+        </symbol>
+        <symbol id="icon-digg" viewBox="0 0 37 32">
+            <path class="path1" d="M5.857 5.036h3.643v17.554h-9.5v-12.446h5.857v-5.107zM5.857 19.661v-6.589h-2.196v6.589h2.196zM10.964 10.143v12.446h3.661v-12.446h-3.661zM10.964 5.036v3.643h3.661v-3.643h-3.661zM16.089 10.143h9.518v16.821h-9.518v-2.911h5.857v-1.464h-5.857v-12.446zM21.946 19.661v-6.589h-2.196v6.589h2.196zM27.071 10.143h9.5v16.821h-9.5v-2.911h5.839v-1.464h-5.839v-12.446zM32.911 19.661v-6.589h-2.196v6.589h2.196z"></path>
+        </symbol>
+        <symbol id="icon-spotify" viewBox="0 0 27 32">
+            <path class="path1" d="M20.125 21.607q0-0.571-0.536-0.911-3.446-2.054-7.982-2.054-2.375 0-5.125 0.607-0.75 0.161-0.75 0.929 0 0.357 0.241 0.616t0.634 0.259q0.089 0 0.661-0.143 2.357-0.482 4.339-0.482 4.036 0 7.089 1.839 0.339 0.196 0.589 0.196 0.339 0 0.589-0.241t0.25-0.616zM21.839 17.768q0-0.714-0.625-1.089-4.232-2.518-9.786-2.518-2.732 0-5.411 0.75-0.857 0.232-0.857 1.143 0 0.446 0.313 0.759t0.759 0.313q0.125 0 0.661-0.143 2.179-0.589 4.482-0.589 4.982 0 8.714 2.214 0.429 0.232 0.679 0.232 0.446 0 0.759-0.313t0.313-0.759zM23.768 13.339q0-0.839-0.714-1.25-2.25-1.304-5.232-1.973t-6.125-0.67q-3.643 0-6.5 0.839-0.411 0.125-0.688 0.455t-0.277 0.866q0 0.554 0.366 0.929t0.92 0.375q0.196 0 0.714-0.143 2.375-0.661 5.482-0.661 2.839 0 5.527 0.607t4.527 1.696q0.375 0.214 0.714 0.214 0.518 0 0.902-0.366t0.384-0.92zM27.429 16q0 3.732-1.839 6.884t-4.991 4.991-6.884 1.839-6.884-1.839-4.991-4.991-1.839-6.884 1.839-6.884 4.991-4.991 6.884-1.839 6.884 1.839 4.991 4.991 1.839 6.884z"></path>
+        </symbol>
+        <symbol id="icon-soundcloud" viewBox="0 0 41 32">
+            <path class="path1" d="M14 24.5l0.286-4.304-0.286-9.339q-0.018-0.179-0.134-0.304t-0.295-0.125q-0.161 0-0.286 0.125t-0.125 0.304l-0.25 9.339 0.25 4.304q0.018 0.179 0.134 0.295t0.277 0.116q0.393 0 0.429-0.411zM19.286 23.982l0.196-3.768-0.214-10.464q0-0.286-0.232-0.429-0.143-0.089-0.286-0.089t-0.286 0.089q-0.232 0.143-0.232 0.429l-0.018 0.107-0.179 10.339q0 0.018 0.196 4.214v0.018q0 0.179 0.107 0.304 0.161 0.196 0.411 0.196 0.196 0 0.357-0.161 0.161-0.125 0.161-0.357zM0.625 17.911l0.357 2.286-0.357 2.25q-0.036 0.161-0.161 0.161t-0.161-0.161l-0.304-2.25 0.304-2.286q0.036-0.161 0.161-0.161t0.161 0.161zM2.161 16.5l0.464 3.696-0.464 3.625q-0.036 0.161-0.179 0.161-0.161 0-0.161-0.179l-0.411-3.607 0.411-3.696q0-0.161 0.161-0.161 0.143 0 0.179 0.161zM3.804 15.821l0.446 4.375-0.446 4.232q0 0.196-0.196 0.196-0.179 0-0.214-0.196l-0.375-4.232 0.375-4.375q0.036-0.214 0.214-0.214 0.196 0 0.196 0.214zM5.482 15.696l0.411 4.5-0.411 4.357q-0.036 0.232-0.25 0.232-0.232 0-0.232-0.232l-0.375-4.357 0.375-4.5q0-0.232 0.232-0.232 0.214 0 0.25 0.232zM7.161 16.018l0.375 4.179-0.375 4.393q-0.036 0.286-0.286 0.286-0.107 0-0.188-0.080t-0.080-0.205l-0.357-4.393 0.357-4.179q0-0.107 0.080-0.188t0.188-0.080q0.25 0 0.286 0.268zM8.839 13.411l0.375 6.786-0.375 4.393q0 0.125-0.089 0.223t-0.214 0.098q-0.286 0-0.321-0.321l-0.321-4.393 0.321-6.786q0.036-0.321 0.321-0.321 0.125 0 0.214 0.098t0.089 0.223zM10.518 11.875l0.339 8.357-0.339 4.357q0 0.143-0.098 0.241t-0.241 0.098q-0.321 0-0.357-0.339l-0.286-4.357 0.286-8.357q0.036-0.339 0.357-0.339 0.143 0 0.241 0.098t0.098 0.241zM12.268 11.161l0.321 9.036-0.321 4.321q-0.036 0.375-0.393 0.375-0.339 0-0.375-0.375l-0.286-4.321 0.286-9.036q0-0.161 0.116-0.277t0.259-0.116q0.161 0 0.268 0.116t0.125 0.277zM19.268 24.411v0 0zM15.732 11.089l0.268 9.107-0.268 4.268q0 0.179-0.134 0.313t-0.313 0.134-0.304-0.125-0.143-0.321l-0.25-4.268 0.25-9.107q0-0.196 0.134-0.321t0.313-0.125 0.313 0.125 0.134 0.321zM17.5 11.429l0.25 8.786-0.25 4.214q0 0.196-0.143 0.339t-0.339 0.143-0.339-0.143-0.161-0.339l-0.214-4.214 0.214-8.786q0.018-0.214 0.161-0.357t0.339-0.143 0.33 0.143 0.152 0.357zM21.286 20.214l-0.25 4.125q0 0.232-0.161 0.393t-0.393 0.161-0.393-0.161-0.179-0.393l-0.107-2.036-0.107-2.089 0.214-11.357v-0.054q0.036-0.268 0.214-0.429 0.161-0.125 0.357-0.125 0.143 0 0.268 0.089 0.25 0.143 0.286 0.464zM41.143 19.875q0 2.089-1.482 3.563t-3.571 1.473h-14.036q-0.232-0.036-0.393-0.196t-0.161-0.393v-16.054q0-0.411 0.5-0.589 1.518-0.607 3.232-0.607 3.482 0 6.036 2.348t2.857 5.777q0.946-0.393 1.964-0.393 2.089 0 3.571 1.482t1.482 3.589z"></path>
+        </symbol>
+        <symbol id="icon-codepen" viewBox="0 0 32 32">
+            <path class="path1" d="M3.857 20.875l10.768 7.179v-6.411l-5.964-3.982zM2.75 18.304l3.446-2.304-3.446-2.304v4.607zM17.375 28.054l10.768-7.179-4.804-3.214-5.964 3.982v6.411zM16 19.25l4.857-3.25-4.857-3.25-4.857 3.25zM8.661 14.339l5.964-3.982v-6.411l-10.768 7.179zM25.804 16l3.446 2.304v-4.607zM23.339 14.339l4.804-3.214-10.768-7.179v6.411zM32 11.125v9.75q0 0.732-0.607 1.143l-14.625 9.75q-0.375 0.232-0.768 0.232t-0.768-0.232l-14.625-9.75q-0.607-0.411-0.607-1.143v-9.75q0-0.732 0.607-1.143l14.625-9.75q0.375-0.232 0.768-0.232t0.768 0.232l14.625 9.75q0.607 0.411 0.607 1.143z"></path>
+        </symbol>
+        <symbol id="icon-twitch" viewBox="0 0 32 32">
+            <path class="path1" d="M16 7.75v7.75h-2.589v-7.75h2.589zM23.107 7.75v7.75h-2.589v-7.75h2.589zM23.107 21.321l4.518-4.536v-14.196h-21.321v18.732h5.821v3.875l3.875-3.875h7.107zM30.214 0v18.089l-7.75 7.75h-5.821l-3.875 3.875h-3.875v-3.875h-7.107v-20.679l1.946-5.161h26.482z"></path>
+        </symbol>
+        <symbol id="icon-meanpath" viewBox="0 0 27 32">
+            <path class="path1" d="M23.411 15.036v2.036q0 0.429-0.241 0.679t-0.67 0.25h-3.607q-0.429 0-0.679-0.25t-0.25-0.679v-2.036q0-0.429 0.25-0.679t0.679-0.25h3.607q0.429 0 0.67 0.25t0.241 0.679zM14.661 19.143v-4.464q0-0.946-0.58-1.527t-1.527-0.58h-2.375q-1.214 0-1.714 0.929-0.5-0.929-1.714-0.929h-2.321q-0.946 0-1.527 0.58t-0.58 1.527v4.464q0 0.393 0.375 0.393h0.982q0.393 0 0.393-0.393v-4.107q0-0.429 0.241-0.679t0.688-0.25h1.679q0.429 0 0.679 0.25t0.25 0.679v4.107q0 0.393 0.375 0.393h0.964q0.393 0 0.393-0.393v-4.107q0-0.429 0.25-0.679t0.679-0.25h1.732q0.429 0 0.67 0.25t0.241 0.679v4.107q0 0.393 0.393 0.393h0.982q0.375 0 0.375-0.393zM25.179 17.429v-2.75q0-0.946-0.589-1.527t-1.536-0.58h-4.714q-0.946 0-1.536 0.58t-0.589 1.527v7.321q0 0.375 0.393 0.375h0.982q0.375 0 0.375-0.375v-3.214q0.554 0.75 1.679 0.75h3.411q0.946 0 1.536-0.58t0.589-1.527zM27.429 6.429v19.143q0 1.714-1.214 2.929t-2.929 1.214h-19.143q-1.714 0-2.929-1.214t-1.214-2.929v-19.143q0-1.714 1.214-2.929t2.929-1.214h19.143q1.714 0 2.929 1.214t1.214 2.929z"></path>
+        </symbol>
+        <symbol id="icon-pinterest-p" viewBox="0 0 23 32">
+            <path class="path1" d="M0 10.661q0-1.929 0.67-3.634t1.848-2.973 2.714-2.196 3.304-1.393 3.607-0.464q2.821 0 5.25 1.188t3.946 3.455 1.518 5.125q0 1.714-0.339 3.357t-1.071 3.161-1.786 2.67-2.589 1.839-3.375 0.688q-1.214 0-2.411-0.571t-1.714-1.571q-0.179 0.696-0.5 2.009t-0.42 1.696-0.366 1.268-0.464 1.268-0.571 1.116-0.821 1.384-1.107 1.545l-0.25 0.089-0.161-0.179q-0.268-2.804-0.268-3.357 0-1.643 0.384-3.688t1.188-5.134 0.929-3.625q-0.571-1.161-0.571-3.018 0-1.482 0.929-2.786t2.357-1.304q1.089 0 1.696 0.723t0.607 1.83q0 1.179-0.786 3.411t-0.786 3.339q0 1.125 0.804 1.866t1.946 0.741q0.982 0 1.821-0.446t1.402-1.214 1-1.696 0.679-1.973 0.357-1.982 0.116-1.777q0-3.089-1.955-4.813t-5.098-1.723q-3.571 0-5.964 2.313t-2.393 5.866q0 0.786 0.223 1.518t0.482 1.161 0.482 0.813 0.223 0.545q0 0.5-0.268 1.304t-0.661 0.804q-0.036 0-0.304-0.054-0.911-0.268-1.616-1t-1.089-1.688-0.58-1.929-0.196-1.902z"></path>
+        </symbol>
+        <symbol id="icon-periscope" viewBox="0 0 24 28">
+            <path class="path1" d="M12.285,1C6.696,1,2.277,5.643,2.277,11.243c0,5.851,7.77,14.578,10.007,14.578c1.959,0,9.729-8.728,9.729-14.578 C22.015,5.643,17.596,1,12.285,1z M12.317,16.551c-3.473,0-6.152-2.611-6.152-5.664c0-1.292,0.39-2.472,1.065-3.438 c0.206,1.084,1.18,1.906,2.352,1.906c1.322,0,2.393-1.043,2.393-2.333c0-0.832-0.447-1.561-1.119-1.975 c0.467-0.105,0.955-0.161,1.46-0.161c3.133,0,5.81,2.611,5.81,5.998C18.126,13.94,15.449,16.551,12.317,16.551z"></path>
+        </symbol>
+        <symbol id="icon-get-pocket" viewBox="0 0 31 32">
+            <path class="path1" d="M27.946 2.286q1.161 0 1.964 0.813t0.804 1.973v9.268q0 3.143-1.214 6t-3.259 4.911-4.893 3.259-5.973 1.205q-3.143 0-5.991-1.205t-4.902-3.259-3.268-4.911-1.214-6v-9.268q0-1.143 0.821-1.964t1.964-0.821h25.161zM15.375 21.286q0.839 0 1.464-0.589l7.214-6.929q0.661-0.625 0.661-1.518 0-0.875-0.616-1.491t-1.491-0.616q-0.839 0-1.464 0.589l-5.768 5.536-5.768-5.536q-0.625-0.589-1.446-0.589-0.875 0-1.491 0.616t-0.616 1.491q0 0.911 0.643 1.518l7.232 6.929q0.589 0.589 1.446 0.589z"></path>
+        </symbol>
+        <symbol id="icon-vimeo" viewBox="0 0 32 32">
+            <path class="path1" d="M30.518 9.25q-0.179 4.214-5.929 11.625-5.946 7.696-10.036 7.696-2.536 0-4.286-4.696-0.786-2.857-2.357-8.607-1.286-4.679-2.804-4.679-0.321 0-2.268 1.357l-1.375-1.75q0.429-0.375 1.929-1.723t2.321-2.063q2.786-2.464 4.304-2.607 1.696-0.161 2.732 0.991t1.446 3.634q0.786 5.125 1.179 6.661 0.982 4.446 2.143 4.446 0.911 0 2.75-2.875 1.804-2.875 1.946-4.393 0.232-2.482-1.946-2.482-1.018 0-2.161 0.464 2.143-7.018 8.196-6.821 4.482 0.143 4.214 5.821z"></path>
+        </symbol>
+        <symbol id="icon-reddit-alien" viewBox="0 0 32 32">
+            <path class="path1" d="M32 15.107q0 1.036-0.527 1.884t-1.42 1.295q0.214 0.821 0.214 1.714 0 2.768-1.902 5.125t-5.188 3.723-7.143 1.366-7.134-1.366-5.179-3.723-1.902-5.125q0-0.839 0.196-1.679-0.911-0.446-1.464-1.313t-0.554-1.902q0-1.464 1.036-2.509t2.518-1.045q1.518 0 2.589 1.125 3.893-2.714 9.196-2.893l2.071-9.304q0.054-0.232 0.268-0.375t0.464-0.089l6.589 1.446q0.321-0.661 0.964-1.063t1.411-0.402q1.107 0 1.893 0.777t0.786 1.884-0.786 1.893-1.893 0.786-1.884-0.777-0.777-1.884l-5.964-1.321-1.857 8.429q5.357 0.161 9.268 2.857 1.036-1.089 2.554-1.089 1.482 0 2.518 1.045t1.036 2.509zM7.464 18.661q0 1.107 0.777 1.893t1.884 0.786 1.893-0.786 0.786-1.893-0.786-1.884-1.893-0.777q-1.089 0-1.875 0.786t-0.786 1.875zM21.929 25q0.196-0.196 0.196-0.464t-0.196-0.464q-0.179-0.179-0.446-0.179t-0.464 0.179q-0.732 0.75-2.161 1.107t-2.857 0.357-2.857-0.357-2.161-1.107q-0.196-0.179-0.464-0.179t-0.446 0.179q-0.196 0.179-0.196 0.455t0.196 0.473q0.768 0.768 2.116 1.214t2.188 0.527 1.625 0.080 1.625-0.080 2.188-0.527 2.116-1.214zM21.875 21.339q1.107 0 1.884-0.786t0.777-1.893q0-1.089-0.786-1.875t-1.875-0.786q-1.107 0-1.893 0.777t-0.786 1.884 0.786 1.893 1.893 0.786z"></path>
+        </symbol>
+        <symbol id="icon-hashtag" viewBox="0 0 32 32">
+            <path class="path1" d="M17.696 18.286l1.143-4.571h-4.536l-1.143 4.571h4.536zM31.411 9.286l-1 4q-0.125 0.429-0.554 0.429h-5.839l-1.143 4.571h5.554q0.268 0 0.446 0.214 0.179 0.25 0.107 0.5l-1 4q-0.089 0.429-0.554 0.429h-5.839l-1.446 5.857q-0.125 0.429-0.554 0.429h-4q-0.286 0-0.464-0.214-0.161-0.214-0.107-0.5l1.393-5.571h-4.536l-1.446 5.857q-0.125 0.429-0.554 0.429h-4.018q-0.268 0-0.446-0.214-0.161-0.214-0.107-0.5l1.393-5.571h-5.554q-0.268 0-0.446-0.214-0.161-0.214-0.107-0.5l1-4q0.125-0.429 0.554-0.429h5.839l1.143-4.571h-5.554q-0.268 0-0.446-0.214-0.179-0.25-0.107-0.5l1-4q0.089-0.429 0.554-0.429h5.839l1.446-5.857q0.125-0.429 0.571-0.429h4q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5l-1.393 5.571h4.536l1.446-5.857q0.125-0.429 0.571-0.429h4q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5l-1.393 5.571h5.554q0.268 0 0.446 0.214 0.161 0.214 0.107 0.5z"></path>
+        </symbol>
+        <symbol id="icon-chain" viewBox="0 0 30 32">
+            <path class="path1" d="M26 21.714q0-0.714-0.5-1.214l-3.714-3.714q-0.5-0.5-1.214-0.5-0.75 0-1.286 0.571 0.054 0.054 0.339 0.33t0.384 0.384 0.268 0.339 0.232 0.455 0.063 0.491q0 0.714-0.5 1.214t-1.214 0.5q-0.268 0-0.491-0.063t-0.455-0.232-0.339-0.268-0.384-0.384-0.33-0.339q-0.589 0.554-0.589 1.304 0 0.714 0.5 1.214l3.679 3.696q0.482 0.482 1.214 0.482 0.714 0 1.214-0.464l2.625-2.607q0.5-0.5 0.5-1.196zM13.446 9.125q0-0.714-0.5-1.214l-3.679-3.696q-0.5-0.5-1.214-0.5-0.696 0-1.214 0.482l-2.625 2.607q-0.5 0.5-0.5 1.196 0 0.714 0.5 1.214l3.714 3.714q0.482 0.482 1.214 0.482 0.75 0 1.286-0.554-0.054-0.054-0.339-0.33t-0.384-0.384-0.268-0.339-0.232-0.455-0.063-0.491q0-0.714 0.5-1.214t1.214-0.5q0.268 0 0.491 0.063t0.455 0.232 0.339 0.268 0.384 0.384 0.33 0.339q0.589-0.554 0.589-1.304zM29.429 21.714q0 2.143-1.518 3.625l-2.625 2.607q-1.482 1.482-3.625 1.482-2.161 0-3.643-1.518l-3.679-3.696q-1.482-1.482-1.482-3.625 0-2.196 1.571-3.732l-1.571-1.571q-1.536 1.571-3.714 1.571-2.143 0-3.643-1.5l-3.714-3.714q-1.5-1.5-1.5-3.643t1.518-3.625l2.625-2.607q1.482-1.482 3.625-1.482 2.161 0 3.643 1.518l3.679 3.696q1.482 1.482 1.482 3.625 0 2.196-1.571 3.732l1.571 1.571q1.536-1.571 3.714-1.571 2.143 0 3.643 1.5l3.714 3.714q1.5 1.5 1.5 3.643z"></path>
+        </symbol>
+        <symbol id="icon-thumb-tack" viewBox="0 0 21 32">
+            <path class="path1" d="M8.571 15.429v-8q0-0.25-0.161-0.411t-0.411-0.161-0.411 0.161-0.161 0.411v8q0 0.25 0.161 0.411t0.411 0.161 0.411-0.161 0.161-0.411zM20.571 21.714q0 0.464-0.339 0.804t-0.804 0.339h-7.661l-0.911 8.625q-0.036 0.214-0.188 0.366t-0.366 0.152h-0.018q-0.482 0-0.571-0.482l-1.357-8.661h-7.214q-0.464 0-0.804-0.339t-0.339-0.804q0-2.196 1.402-3.955t3.17-1.759v-9.143q-0.929 0-1.607-0.679t-0.679-1.607 0.679-1.607 1.607-0.679h11.429q0.929 0 1.607 0.679t0.679 1.607-0.679 1.607-1.607 0.679v9.143q1.768 0 3.17 1.759t1.402 3.955z"></path>
+        </symbol>
+        <symbol id="icon-arrow-left" viewBox="0 0 43 32">
+            <path class="path1" d="M42.311 14.044c-0.178-0.178-0.533-0.356-0.711-0.356h-33.778l10.311-10.489c0.178-0.178 0.356-0.533 0.356-0.711 0-0.356-0.178-0.533-0.356-0.711l-1.6-1.422c-0.356-0.178-0.533-0.356-0.889-0.356s-0.533 0.178-0.711 0.356l-14.578 14.933c-0.178 0.178-0.356 0.533-0.356 0.711s0.178 0.533 0.356 0.711l14.756 14.933c0 0.178 0.356 0.356 0.533 0.356s0.533-0.178 0.711-0.356l1.6-1.6c0.178-0.178 0.356-0.533 0.356-0.711s-0.178-0.533-0.356-0.711l-10.311-10.489h33.778c0.178 0 0.533-0.178 0.711-0.356 0.356-0.178 0.533-0.356 0.533-0.711v-2.133c0-0.356-0.178-0.711-0.356-0.889z"></path>
+        </symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 43 32">
+            <path class="path1" d="M0.356 17.956c0.178 0.178 0.533 0.356 0.711 0.356h33.778l-10.311 10.489c-0.178 0.178-0.356 0.533-0.356 0.711 0 0.356 0.178 0.533 0.356 0.711l1.6 1.6c0.178 0.178 0.533 0.356 0.711 0.356s0.533-0.178 0.711-0.356l14.756-14.933c0.178-0.356 0.356-0.711 0.356-0.889s-0.178-0.533-0.356-0.711l-14.756-14.933c0-0.178-0.356-0.356-0.533-0.356s-0.533 0.178-0.711 0.356l-1.6 1.6c-0.178 0.178-0.356 0.533-0.356 0.711s0.178 0.533 0.356 0.711l10.311 10.489h-33.778c-0.178 0-0.533 0.178-0.711 0.356-0.356 0.178-0.533 0.356-0.533 0.711v2.311c0 0.178 0.178 0.533 0.356 0.711z"></path>
+        </symbol>
+        <symbol id="icon-play" viewBox="0 0 22 28">
+            <path d="M21.625 14.484l-20.75 11.531c-0.484 0.266-0.875 0.031-0.875-0.516v-23c0-0.547 0.391-0.781 0.875-0.516l20.75 11.531c0.484 0.266 0.484 0.703 0 0.969z"></path>
+        </symbol>
+        <symbol id="icon-pause" viewBox="0 0 24 28">
+            <path d="M24 3v22c0 0.547-0.453 1-1 1h-8c-0.547 0-1-0.453-1-1v-22c0-0.547 0.453-1 1-1h8c0.547 0 1 0.453 1 1zM10 3v22c0 0.547-0.453 1-1 1h-8c-0.547 0-1-0.453-1-1v-22c0-0.547 0.453-1 1-1h8c0.547 0 1 0.453 1 1z"></path>
+        </symbol>
+    </defs>
+</svg>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"383c3b1fb5","applicationID":"94924493","transactionName":"NgEAZRNSVkRTVxVfXg9LN0MIHFFZVlEZGEEJFA==","queueTime":1,"applicationTime":1212,"atts":"GkYDE1tIRUo=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+
+</html>
+<!--
+Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
+
+Retrieved 11769 objects (2 MB) from Redis using PhpRedis (v5.3.4).
+-->
